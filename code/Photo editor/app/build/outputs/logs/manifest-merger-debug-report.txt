@@ -1,0 +1,176 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:2:1-25:12
+MERGED from [com.android.support:design:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\5661806f0f8b4fe128a7005ab5f14456\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\d4159fba97c87df2b76a2d1f14e4725b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\b03d59eb041df78933b48e4f7ece8cff\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\17f053c4d92c2dada1d47698dad40327\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\dc3fcaa0927256ac52ea0fd7b186aa20\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\c1c5ae9d1e7e86a0443e5b04be250e9a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\7c17178e481bf9a9888e695ef8c06f11\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\75b8eb6eee092449de2e210940460d3d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\26b4de1c649af70c01608101a3e56c0b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\3cf1e6d230a5b0728cdc2ec4ca601c7a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\cac6ffc7aa7f006b4f0d4700d9fa7ffe\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\c8cc007c7363e9c0978b6da3148f1788\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\3a16bc1adcbd9cebeba1a274cbc3894c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\66a1d18abbef79e6d9df87a470687f4a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\93edbee8ad8a514472d25f7afb663b8a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\72579ad6deb7512b4945c7d5c5efd0a4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\677c255705409c8d8988b2be76deeb63\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\3a54bb21b6f4f0cff820d8b6d522fad5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\24501c5ebaf2ce99b64a75bf46192b9b\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\84730ea293294ec1eaab167a56bc57f8\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\ac8ab8bdd1255b6032cb8bd9a84c4f2b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\da01c1772da4ad58c8f6e64bd947e7ba\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\c6728d2d39833bf08b7effd1c0c30ced\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\f56a4e4a1a500521b1d539db11495617\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\30a23e6302fcb3f60811a3383e847707\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\e4f65f58edef03f789ede8719551ecac\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\9434c8284f4fa78a5c48b167c28d04e2\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\9d6f37376c40b9095ec9befd7b5d4b01\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\503a0190ea7b4325fa219095eb48e879\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\8913130e3e1d8dc3791715abb173d4d2\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\96b21551afd881b784ff7999b5582957\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:2:1-25:12
+	package
+		ADDED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:3:5-41
+		INJECTED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:2:1-25:12
+		INJECTED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:2:1-25:12
+		INJECTED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:5:5-23:19
+MERGED from [com.android.support:design:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\5661806f0f8b4fe128a7005ab5f14456\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\5661806f0f8b4fe128a7005ab5f14456\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\b03d59eb041df78933b48e4f7ece8cff\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\b03d59eb041df78933b48e4f7ece8cff\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\24501c5ebaf2ce99b64a75bf46192b9b\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\24501c5ebaf2ce99b64a75bf46192b9b\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\84730ea293294ec1eaab167a56bc57f8\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\84730ea293294ec1eaab167a56bc57f8\AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\24501c5ebaf2ce99b64a75bf46192b9b\AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:11:9-40
+activity#com.example.filesystemtest.HomeActivity
+ADDED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:12:9-59
+	android:name
+		ADDED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:12:19-47
+activity#com.example.filesystemtest.MainActivity
+ADDED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:13:9-22:20
+	android:label
+		ADDED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:15:13-45
+	android:theme
+		ADDED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:16:13-56
+	android:name
+		ADDED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:14:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:17:13-21:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:18:17-69
+	android:name
+		ADDED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:18:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:20:17-77
+	android:name
+		ADDED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml:20:27-74
+uses-sdk
+INJECTED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\5661806f0f8b4fe128a7005ab5f14456\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\5661806f0f8b4fe128a7005ab5f14456\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\d4159fba97c87df2b76a2d1f14e4725b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\d4159fba97c87df2b76a2d1f14e4725b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\b03d59eb041df78933b48e4f7ece8cff\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\b03d59eb041df78933b48e4f7ece8cff\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\17f053c4d92c2dada1d47698dad40327\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\17f053c4d92c2dada1d47698dad40327\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\dc3fcaa0927256ac52ea0fd7b186aa20\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\dc3fcaa0927256ac52ea0fd7b186aa20\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\c1c5ae9d1e7e86a0443e5b04be250e9a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\c1c5ae9d1e7e86a0443e5b04be250e9a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\7c17178e481bf9a9888e695ef8c06f11\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\7c17178e481bf9a9888e695ef8c06f11\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\75b8eb6eee092449de2e210940460d3d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\75b8eb6eee092449de2e210940460d3d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\26b4de1c649af70c01608101a3e56c0b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\26b4de1c649af70c01608101a3e56c0b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\3cf1e6d230a5b0728cdc2ec4ca601c7a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\3cf1e6d230a5b0728cdc2ec4ca601c7a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\cac6ffc7aa7f006b4f0d4700d9fa7ffe\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\cac6ffc7aa7f006b4f0d4700d9fa7ffe\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\c8cc007c7363e9c0978b6da3148f1788\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\c8cc007c7363e9c0978b6da3148f1788\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\3a16bc1adcbd9cebeba1a274cbc3894c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\3a16bc1adcbd9cebeba1a274cbc3894c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\66a1d18abbef79e6d9df87a470687f4a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\66a1d18abbef79e6d9df87a470687f4a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\93edbee8ad8a514472d25f7afb663b8a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\93edbee8ad8a514472d25f7afb663b8a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\72579ad6deb7512b4945c7d5c5efd0a4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\72579ad6deb7512b4945c7d5c5efd0a4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\677c255705409c8d8988b2be76deeb63\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\677c255705409c8d8988b2be76deeb63\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\3a54bb21b6f4f0cff820d8b6d522fad5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\3a54bb21b6f4f0cff820d8b6d522fad5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\24501c5ebaf2ce99b64a75bf46192b9b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\24501c5ebaf2ce99b64a75bf46192b9b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\84730ea293294ec1eaab167a56bc57f8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\84730ea293294ec1eaab167a56bc57f8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\ac8ab8bdd1255b6032cb8bd9a84c4f2b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\ac8ab8bdd1255b6032cb8bd9a84c4f2b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\da01c1772da4ad58c8f6e64bd947e7ba\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\da01c1772da4ad58c8f6e64bd947e7ba\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\c6728d2d39833bf08b7effd1c0c30ced\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\c6728d2d39833bf08b7effd1c0c30ced\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\f56a4e4a1a500521b1d539db11495617\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\f56a4e4a1a500521b1d539db11495617\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\30a23e6302fcb3f60811a3383e847707\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\30a23e6302fcb3f60811a3383e847707\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\e4f65f58edef03f789ede8719551ecac\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\e4f65f58edef03f789ede8719551ecac\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\9434c8284f4fa78a5c48b167c28d04e2\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\9434c8284f4fa78a5c48b167c28d04e2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\9d6f37376c40b9095ec9befd7b5d4b01\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\9d6f37376c40b9095ec9befd7b5d4b01\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\503a0190ea7b4325fa219095eb48e879\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\503a0190ea7b4325fa219095eb48e879\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\8913130e3e1d8dc3791715abb173d4d2\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\8913130e3e1d8dc3791715abb173d4d2\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\96b21551afd881b784ff7999b5582957\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Cisco\.gradle\caches\transforms-2\files-2.1\96b21551afd881b784ff7999b5582957\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Cisco\AndroidStudioProjects\Filesystemtest\app\src\main\AndroidManifest.xml
