@@ -32,8 +32,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="40dp"
         android:background="@android:color/background_light"
-        android:hint="Username"
-        android:inputType="number" />
+        android:hint="Username"/>
 
     <EditText
         android:id="@+id/password"
@@ -42,7 +41,6 @@
         android:layout_marginTop="30dp"
         android:background="@android:color/background_light"
         android:hint="Password"
-        android:inputType="numberPassword"
         tools:ignore="DuplicateIds" />
 
     <Button
