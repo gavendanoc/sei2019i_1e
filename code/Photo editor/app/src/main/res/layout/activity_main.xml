@@ -10,7 +10,7 @@
     android:paddingTop="25dp"
     android:paddingRight="25dp"
     android:paddingBottom="25dp"
-    tools:context="MainActivity"
+    tools:context=".presentation.activities.MainActivity"
 
     >
 

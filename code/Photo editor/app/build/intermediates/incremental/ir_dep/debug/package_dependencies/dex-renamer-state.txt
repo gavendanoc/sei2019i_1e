@@ -1,0 +1,4 @@
+#Sat Jun 29 13:50:27 COT 2019
+base.0=C\:\\Users\\ASUS\\AndroidStudioProjects\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+path.0=classes.dex
+renamed.0=classes.dex
