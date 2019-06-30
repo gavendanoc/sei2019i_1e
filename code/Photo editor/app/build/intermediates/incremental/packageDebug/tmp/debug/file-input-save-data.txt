@@ -1,18 +1,18 @@
 #Internal package file, do not edit.
-#Sat Jun 29 13:50:29 COT 2019
+#Sun Jun 30 17:08:48 COT 2019
 4.path=classes.dex
 8.set=DEX
 6.path=classes.dex
 0.baseType=DIRECTORY
 10.path=classes.dex
 5.baseType=DIRECTORY
-1.base=C\:\\Users\\ASUS\\AndroidStudioProjects\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13
+1.base=C\:\\Users\\ASUS\\Documents\\Nuevo\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\17
 8.path=classes.dex
-3.base=C\:\\Users\\ASUS\\AndroidStudioProjects\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\20
+3.base=C\:\\Users\\ASUS\\Documents\\Nuevo\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\15
 4.set=DEX
-5.base=C\:\\Users\\ASUS\\AndroidStudioProjects\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\16
-7.base=C\:\\Users\\ASUS\\AndroidStudioProjects\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\15
-9.base=C\:\\Users\\ASUS\\AndroidStudioProjects\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\17
+5.base=C\:\\Users\\ASUS\\Documents\\Nuevo\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13
+7.base=C\:\\Users\\ASUS\\Documents\\Nuevo\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\20
+9.base=C\:\\Users\\ASUS\\Documents\\Nuevo\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\16
 1.baseType=DIRECTORY
 0.set=DEX
 6.baseType=DIRECTORY
@@ -25,16 +25,16 @@
 3.path=classes.dex
 10.set=DEX
 5.path=classes.dex
-0.base=C\:\\Users\\ASUS\\AndroidStudioProjects\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\11
+0.base=C\:\\Users\\ASUS\\Documents\\Nuevo\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\14
 7.path=classes.dex
 9.path=classes.dex
 6.set=DEX
-2.base=C\:\\Users\\ASUS\\AndroidStudioProjects\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\21
-4.base=C\:\\Users\\ASUS\\AndroidStudioProjects\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\19
+2.base=C\:\\Users\\ASUS\\Documents\\Nuevo\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
+4.base=C\:\\Users\\ASUS\\Documents\\Nuevo\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\21
 3.baseType=DIRECTORY
-6.base=C\:\\Users\\ASUS\\AndroidStudioProjects\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\18
-10.base=C\:\\Users\\ASUS\\AndroidStudioProjects\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\14
-8.base=C\:\\Users\\ASUS\\AndroidStudioProjects\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
+6.base=C\:\\Users\\ASUS\\Documents\\Nuevo\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\11
+10.base=C\:\\Users\\ASUS\\Documents\\Nuevo\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\19
+8.base=C\:\\Users\\ASUS\\Documents\\Nuevo\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\18
 2.set=DEX
 8.baseType=DIRECTORY
 9.set=DEX
