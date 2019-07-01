@@ -1,7 +1,8 @@
-package com.example.photoeditor.dataAccess.databaseEnums.TableFields;
+package com.example.photoeditor.dataAccess.databaseEnums;
 
 public enum RequestFields {
-    TYPE( "type");
+    TYPE( "type"),
+    QUERY("query");
 
     private String Key;
     private RequestFields( String Key){
