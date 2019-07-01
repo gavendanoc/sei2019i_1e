@@ -32,9 +32,6 @@ public class MainActivity extends AppCompatActivity {
         final String username = usernameLogin.getText().toString();
         final String password = passwordLogin.getText().toString();
 
-        Toast.makeText(getApplicationContext(), "Hi" +  username + "  " + password, Toast.LENGTH_SHORT).show();
-
-
 
         UserController loginController = new UserController(MainActivity.this);
         loginController.login(username, password);
