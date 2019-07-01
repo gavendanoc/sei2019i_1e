@@ -1,6 +1,6 @@
 # PhotoEditor
 
-**PhotoEditor** is a simple and lightweight photo edititing 📷 Android app that allows simple image filters. It's like photoshop in your pocket!🔥
+**PhotoEditor** is a simple and lightweight photo editing 📷 android app that allows simple image filters. It's like photoshop in your pocket!🔥
 
 *Filters avaiable vary upon subscription* 💳
 
