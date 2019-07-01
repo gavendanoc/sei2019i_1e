@@ -1,0 +1,208 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:2:1-40:12
+MERGED from [com.android.support:design:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\dd9442019896a1efe64e3c02429f104d\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\8c41165c2c6aebb50f5ec3521db905a8\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\9fc2be12dc71a5ddc156201db9699c35\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\803bfaffa55f1af8bba67a48cc0207c9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\7949c1f011608e151241b48e33ddad02\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\4f68b657bb0f56e56ffb8817dd128afd\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\382ca8ce44747b0f9397c32f78e5f4a6\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\403726f939b0b8321bd218ae85fbba5c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\77e4747bc459d0e36420161b4f0726f6\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\a5b6aae4a6f0237b85c0e03085b43d22\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\7592ceaa1ab9d67010965829d87ea3b8\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\fca1c6f9771050b6ca4efc5184d27546\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\f700d078e05c432ab4461cdd2270be60\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\e304a15de3f04bbfda5cfc0d5b1821b9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\8e8fb5d8761f9654adf213a69426961a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\330960f0ef87238793daf93cffad8558\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\ff222f8621d0bf1210d07fb52878b759\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\777531cd403ced2a3d8de8946c08404d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\af78d6fb474e34fac93252d0d08bdc2e\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\868da8dfd83d468ac12dcdb4221b53d4\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\a75f1c1d5486b42cd9837c360b36d368\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\0b2e133e575241669e750a1086b7f911\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\df5eeb484287113047ac6c3c3cbebca0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\3bc0930f72100a73b444902678a0f8a3\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\6d72e801a4f8e5ede4f1d51c05ef9ac7\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\a52d43be0168986d7514a02444e89d87\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\88a79c39db9416b930df159667d9d8b9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\e649638216174107297cb272c70652f3\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\27f52ace80e7ea2b0ed2cd14a6023e34\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\848c247387f3731e230d4c2ee29167f4\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\22e520f91520fa3784f4e173e83ecc92\AndroidManifest.xml:17:1-22:12
+INJECTED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:2:1-40:12
+	package
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:3:5-38
+		INJECTED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:2:1-40:12
+		INJECTED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:2:1-40:12
+		INJECTED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.CAMERA
+ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:5:5-64
+	android:name
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:5:22-62
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:6:5-80
+	android:name
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:6:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:7:22-77
+application
+ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:9:5-38:19
+MERGED from [com.android.support:design:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\dd9442019896a1efe64e3c02429f104d\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\dd9442019896a1efe64e3c02429f104d\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\9fc2be12dc71a5ddc156201db9699c35\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\9fc2be12dc71a5ddc156201db9699c35\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\af78d6fb474e34fac93252d0d08bdc2e\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\af78d6fb474e34fac93252d0d08bdc2e\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\868da8dfd83d468ac12dcdb4221b53d4\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\868da8dfd83d468ac12dcdb4221b53d4\AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\af78d6fb474e34fac93252d0d08bdc2e\AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:14:9-35
+	android:label
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:12:9-41
+	android:roundIcon
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:13:9-54
+	android:icon
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:11:9-43
+	android:allowBackup
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:10:9-35
+	android:theme
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:15:9-40
+activity#com.example.photoeditor.presentation.activities.OpenCameraActivity
+ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:16:9-89
+	android:name
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:16:19-77
+activity#com.example.photoeditor.presentation.activities.HomeActivity
+ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:17:9-74
+	android:name
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:17:19-71
+activity#com.example.photoeditor.presentation.activities.MainActivity
+ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:18:9-27:20
+	android:label
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:20:13-45
+	android:theme
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:21:13-56
+	android:name
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:19:13-65
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:22:13-26:29
+action#android.intent.action.MAIN
+ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:23:17-69
+	android:name
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:23:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:25:17-77
+	android:name
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:25:27-74
+provider#android.support.v4.content.FileProvider
+ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:29:9-37:20
+	android:grantUriPermissions
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:32:13-47
+	android:authorities
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:30:13-70
+	android:exported
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:33:13-37
+	android:name
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:31:13-67
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:34:13-36:57
+	android:resource
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:36:17-55
+	android:name
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml:35:17-67
+uses-sdk
+INJECTED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml
+INJECTED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\dd9442019896a1efe64e3c02429f104d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\dd9442019896a1efe64e3c02429f104d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\8c41165c2c6aebb50f5ec3521db905a8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\8c41165c2c6aebb50f5ec3521db905a8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\9fc2be12dc71a5ddc156201db9699c35\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\9fc2be12dc71a5ddc156201db9699c35\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\803bfaffa55f1af8bba67a48cc0207c9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\803bfaffa55f1af8bba67a48cc0207c9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\7949c1f011608e151241b48e33ddad02\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\7949c1f011608e151241b48e33ddad02\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\4f68b657bb0f56e56ffb8817dd128afd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\4f68b657bb0f56e56ffb8817dd128afd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\382ca8ce44747b0f9397c32f78e5f4a6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\382ca8ce44747b0f9397c32f78e5f4a6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\403726f939b0b8321bd218ae85fbba5c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\403726f939b0b8321bd218ae85fbba5c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\77e4747bc459d0e36420161b4f0726f6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\77e4747bc459d0e36420161b4f0726f6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\a5b6aae4a6f0237b85c0e03085b43d22\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\a5b6aae4a6f0237b85c0e03085b43d22\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\7592ceaa1ab9d67010965829d87ea3b8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\7592ceaa1ab9d67010965829d87ea3b8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\fca1c6f9771050b6ca4efc5184d27546\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\fca1c6f9771050b6ca4efc5184d27546\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\f700d078e05c432ab4461cdd2270be60\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\f700d078e05c432ab4461cdd2270be60\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\e304a15de3f04bbfda5cfc0d5b1821b9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\e304a15de3f04bbfda5cfc0d5b1821b9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\8e8fb5d8761f9654adf213a69426961a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\8e8fb5d8761f9654adf213a69426961a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\330960f0ef87238793daf93cffad8558\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\330960f0ef87238793daf93cffad8558\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\ff222f8621d0bf1210d07fb52878b759\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\ff222f8621d0bf1210d07fb52878b759\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\777531cd403ced2a3d8de8946c08404d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\777531cd403ced2a3d8de8946c08404d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\af78d6fb474e34fac93252d0d08bdc2e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\af78d6fb474e34fac93252d0d08bdc2e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\868da8dfd83d468ac12dcdb4221b53d4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\868da8dfd83d468ac12dcdb4221b53d4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\a75f1c1d5486b42cd9837c360b36d368\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\a75f1c1d5486b42cd9837c360b36d368\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\0b2e133e575241669e750a1086b7f911\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\0b2e133e575241669e750a1086b7f911\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\df5eeb484287113047ac6c3c3cbebca0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\df5eeb484287113047ac6c3c3cbebca0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\3bc0930f72100a73b444902678a0f8a3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\3bc0930f72100a73b444902678a0f8a3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\6d72e801a4f8e5ede4f1d51c05ef9ac7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\6d72e801a4f8e5ede4f1d51c05ef9ac7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\a52d43be0168986d7514a02444e89d87\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\a52d43be0168986d7514a02444e89d87\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\88a79c39db9416b930df159667d9d8b9\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\88a79c39db9416b930df159667d9d8b9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\e649638216174107297cb272c70652f3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\e649638216174107297cb272c70652f3\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\27f52ace80e7ea2b0ed2cd14a6023e34\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\27f52ace80e7ea2b0ed2cd14a6023e34\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\848c247387f3731e230d4c2ee29167f4\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\848c247387f3731e230d4c2ee29167f4\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\22e520f91520fa3784f4e173e83ecc92\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\julia\.gradle\caches\transforms-2\files-2.1\22e520f91520fa3784f4e173e83ecc92\AndroidManifest.xml:20:5-44
+INJECTED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml
+INJECTED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml
+		ADDED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Documentos\prueba\sei2019i_1e\code\Photo editor\app\src\main\AndroidManifest.xml
