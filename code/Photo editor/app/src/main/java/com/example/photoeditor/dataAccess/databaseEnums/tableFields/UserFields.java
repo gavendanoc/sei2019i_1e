@@ -1,4 +1,4 @@
-package com.example.photoeditor.dataAccess.databaseEnums.TableFields;
+package com.example.photoeditor.dataAccess.databaseEnums.tableFields;
 
 public enum UserFields {
     ID(0, "id"),
@@ -6,8 +6,8 @@ public enum UserFields {
     USERNAME(2,"username"),
     EMAIL(3, "email"),
     PASSWORD(4, "password"),
-    ID_ROL(5, "ID_ROL"),
-    STATUS(6, "STATUS");
+    ID_ROL(5, "id_role"),
+    STATUS(6, "status");
 
     private int position;
     private String Key;

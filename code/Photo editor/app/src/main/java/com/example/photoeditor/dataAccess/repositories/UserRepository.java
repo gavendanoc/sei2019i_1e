@@ -6,15 +6,12 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.example.photoeditor.bussinesLogic.controllers.UserController;
-import com.example.photoeditor.dataAccess.databaseEnums.TableFields.UserFields;
-import com.example.photoeditor.dataAccess.databaseEnums.TableQueries.UserQueries;
+import com.example.photoeditor.dataAccess.databaseEnums.tableFields.UserFields;
 import com.example.photoeditor.dataAccess.models.UserModel;
 import com.example.photoeditor.dataAccess.requests.UserRequest;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.HashMap;
 
 public class UserRepository {
     private Context context;
@@ -28,9 +25,13 @@ public class UserRepository {
             @Override
             public void onResponse(String response) {
                 try {
+                    System.out.println("debug here" );
                     JSONObject jsonResponse = new JSONObject(response);
                     boolean ok = jsonResponse.getBoolean("success");
+                    System.out.println("debug" + ok);
+                    System.out.println("debug" + jsonResponse.getString("info"));
                     if (ok){
+
                         UserModel user = new UserModel();
                         user.setId(jsonResponse.getInt(UserFields.ID.getKey()));
                         user.setUsername(jsonResponse.getString(UserFields.USERNAME.getKey()));
@@ -41,6 +42,8 @@ public class UserRepository {
                         userController.loginLogic(null);
                     }
                 } catch (JSONException ex){
+                    System.out.println("debug problem");
+
                     ex.getMessage();
 
                 }
@@ -48,14 +51,9 @@ public class UserRepository {
         };
 
 
-        HashMap<String, String > parameters= new HashMap<>();
-        parameters.put(UserFields.USERNAME.getKey(), loginUser.getUsername());
-        parameters.put(UserFields.PASSWORD.getKey(), loginUser.getPassword());
-
-        UserRequest r = new UserRequest(parameters,
-                response,
-                UserQueries.SelecByUsernameAndPassword.getQuery());
-
+        UserRequest r = new UserRequest(
+                UserRequest.selecByUsernameAndPassword(loginUser.getUsername(), loginUser.getPassword()),
+                response);
 
         RequestQueue cola = Volley.newRequestQueue(context);
         cola.add(r);
