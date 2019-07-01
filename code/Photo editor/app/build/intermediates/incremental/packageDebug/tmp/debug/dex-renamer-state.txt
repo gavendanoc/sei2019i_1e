@@ -1,4 +1,0 @@
-#Mon Jul 01 07:41:40 COT 2019
-base.0=C\:\\Users\\ASUS\\Documents\\Nuevo\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
-path.0=classes.dex
-renamed.0=classes.dex

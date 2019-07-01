@@ -1,7 +1,0 @@
-#Internal package file, do not edit.
-#Mon Jul 01 07:41:40 COT 2019
-0.baseType=DIRECTORY
-0.base=C\:\\Users\\ASUS\\Documents\\Nuevo\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
-0.path=classes.dex
-0.set=DEX
-count=1
