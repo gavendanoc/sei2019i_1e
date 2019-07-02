@@ -5,7 +5,9 @@
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
+  
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -24,10 +26,10 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name=".presentation.activities.OpenCameraActivity"></activity>
-        <activity android:name=".presentation.activities.HomeActivity" />
+        <activity android:name="com.example.photoeditor.presentation.activities.OpenCameraActivity"></activity>
+        <activity android:name="com.example.photoeditor.presentation.activities.HomeActivity"></activity>
         <activity
-            android:name=".presentation.activities.MainActivity"
+            android:name="com.example.photoeditor.presentation.activities.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
