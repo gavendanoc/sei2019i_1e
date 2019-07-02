@@ -1,4 +1,0 @@
-#Sun Jun 30 00:32:58 COT 2019
-base.0=D\:\\Documentos\\prueba\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out
-path.0=classes.dex
-renamed.0=classes.dex

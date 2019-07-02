@@ -1,4 +1,0 @@
-#Sun Jun 30 20:20:53 COT 2019
-base.0=D\:\\Documentos\\Github\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
-path.0=classes.dex
-renamed.0=classes.dex

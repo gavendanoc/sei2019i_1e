@@ -1,7 +1,0 @@
-#Internal package file, do not edit.
-#Sun Jun 30 00:32:58 COT 2019
-0.baseType=DIRECTORY
-0.base=D\:\\Documentos\\prueba\\sei2019i_1e\\code\\Photo editor\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out
-0.path=classes.dex
-0.set=DEX
-count=1
