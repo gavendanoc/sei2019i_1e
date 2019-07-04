@@ -4,7 +4,9 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
 import com.example.photoeditor.dataAccess.databaseEnums.RequestFields;
+import com.example.photoeditor.dataAccess.databaseEnums.tableFields.UserFields;
 import com.example.photoeditor.dataAccess.databaseEnums.tableQueries.UserQueries;
+import com.example.photoeditor.dataAccess.models.UserModel;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,6 +30,16 @@ public class UserRequest extends StringRequest {
         Object[] args = {username, password};
         String query = UserQueries.SelecByUsernameAndPassword.getFormat(args);
         String type = UserQueries.SelecByUsernameAndPassword.getType();
+
+        Map<String, String > parameter = new HashMap<>();
+        parameter.put(RequestFields.QUERY.getKey(), query);
+        parameter.put(RequestFields.TYPE.getKey(), type);
+        return parameter;
+    }
+    public static Map<String,String> insertUser(UserModel user){
+        Object[] args = {user.getName(),user.getUsername(),user.getEmail(),user.getPassword()};
+        String query= UserQueries.InsertUser.getFormat(args);
+        String type= UserQueries.InsertUser.getType();
 
         Map<String, String > parameter = new HashMap<>();
         parameter.put(RequestFields.QUERY.getKey(), query);

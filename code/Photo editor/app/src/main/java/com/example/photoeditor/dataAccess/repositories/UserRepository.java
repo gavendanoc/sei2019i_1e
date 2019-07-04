@@ -19,7 +19,29 @@ public class UserRepository {
     public UserRepository(Context context) {
         this.context = context;
     }
-
+    public void insertUser(UserModel user, final UserController userController){
+        final boolean[] success = {false};
+        Response.Listener<String> response= new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    System.out.println("Works here");
+                    JSONObject jsonResponse = new JSONObject(response);
+                    System.out.println("here too");
+                    boolean r=jsonResponse.getBoolean("success");
+                    if(r){
+                        userController.regSuccess(r);
+                    }
+                } catch (JSONException ex){
+                    ex.getMessage();
+                    System.out.println("debug problem");
+                }
+            }
+        };
+        UserRequest r = new UserRequest(UserRequest.insertUser(user), response);
+        RequestQueue cola = Volley.newRequestQueue(context);
+        cola.add(r);
+    }
     public void getByUsernameAndPassword(UserModel loginUser, final UserController userController){
         Response.Listener<String> response = new Response.Listener<String>(){
             @Override
@@ -41,7 +63,7 @@ public class UserRepository {
                     } else {
                         userController.loginLogic(null);
                     }
-                } catch (JSONException ex){
+                }catch (JSONException ex){
                     System.out.println("debug problem");
 
                     ex.getMessage();

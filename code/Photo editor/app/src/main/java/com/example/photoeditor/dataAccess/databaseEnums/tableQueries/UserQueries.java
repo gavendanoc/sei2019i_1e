@@ -8,7 +8,9 @@ public enum UserQueries {
             "SelecByUsernameAndPassword",
             "SELECT* FROM " + TableNames.Users.getKey() + " WHERE " +
                     UserFields.USERNAME.getKey() + " = '%s' AND " +
-                    UserFields.PASSWORD.getKey() + " = '%s'")
+                    UserFields.PASSWORD.getKey() + " = '%s'"),
+    InsertUser(
+            "insertUser", "INSERT INTO " +TableNames.Users.getKey()+ " (name,username,email,password,id_role,status) VALUES ('%s','%s','%s','%s',3,1)")
 
     ;
 

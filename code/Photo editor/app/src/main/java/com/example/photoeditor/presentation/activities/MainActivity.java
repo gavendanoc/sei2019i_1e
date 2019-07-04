@@ -40,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this,"Por favor llenar todos los campos", Toast.LENGTH_LONG).show();
         }
     }
+    public void Register(View view){
+        Intent i= new Intent(this, RegisterActivity.class);
+        this.startActivity(i);
+    }
 
     public void attemptLogin(String name, boolean ok) {
         if (ok){
