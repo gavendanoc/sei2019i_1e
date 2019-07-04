@@ -33,9 +33,12 @@ public class MainActivity extends AppCompatActivity {
         final String password = passwordLogin.getText().toString();
 
 
-
-        UserController loginController = new UserController(MainActivity.this);
-        loginController.login(username, password);
+        if(!username.isEmpty() && !password.isEmpty()) {
+            UserController loginController = new UserController(MainActivity.this);
+            loginController.login(username, password);
+        }else{
+            Toast.makeText(this,"Por favor llenar todos los campos", Toast.LENGTH_LONG).show();
+        }
     }
     public void Register(View view){
         Intent i= new Intent(this, RegisterActivity.class);
