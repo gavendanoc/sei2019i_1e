@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             //LoginActivity.this.finish();
         }else{
             AlertDialog.Builder alerta = new AlertDialog.Builder(MainActivity.this);
-            alerta.setMessage("FAIL LOGIN:User does not exist or password is wrong")
+            alerta.setMessage("FAIL LOGIN: User does not exist or password is wrong")
                     .setNegativeButton("Retry",null)
                     .create()
                     .show();

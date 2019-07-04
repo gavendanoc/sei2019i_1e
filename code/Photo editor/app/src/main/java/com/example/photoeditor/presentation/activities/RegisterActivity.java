@@ -1,7 +1,9 @@
 package com.example.photoeditor.presentation.activities;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.sip.SipSession;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -34,12 +36,12 @@ public class RegisterActivity extends AppCompatActivity {
     }
     public void createdUser(boolean reg){
         if(reg){
+
             AlertDialog.Builder alerta = new AlertDialog.Builder(this);
             alerta.setMessage("Usuario creado satisfactoriamente")
-                    .setNegativeButton("Aceptar",null)
+                    .setNegativeButton("Aceptar", null)
                     .create()
                     .show();
-            this.finish();
         }
         else{
             AlertDialog.Builder alerta = new AlertDialog.Builder(this);
