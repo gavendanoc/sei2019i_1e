@@ -4,24 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BC2D2F31"
+    android:background="#77CFE9"
     android:orientation="vertical"
     android:paddingLeft="25dp"
     android:paddingTop="25dp"
     android:paddingRight="25dp"
     android:paddingBottom="25dp"
-    tools:context=".presentation.activities.HomeActivity"
 
-    >
+    tools:context=".presentation.activities.HomeActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
         android:text="Welcome"
+        android:textColor="?attr/colorBackgroundFloating"
         android:textSize="45sp"
         android:textStyle="bold"
-        android:layout_marginTop="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -31,16 +31,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100sp"
-        android:text="Camara"
-        android:textSize="30sp"
-        android:onClick="Camera"/>
+        android:baselineAligned="false"
+        android:onClick="Back"
+        android:text="volver"
+        android:textSize="18sp" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100sp"
-        android:text="volver"
-        android:textSize="30sp"
-        android:onClick="Back"/>
+        android:onClick="Camera"
+        android:text="Camara"
+        android:textSize="18sp" />
 
 </LinearLayout>

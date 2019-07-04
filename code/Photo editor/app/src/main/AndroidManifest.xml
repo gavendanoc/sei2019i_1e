@@ -2,19 +2,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.photoeditor">
 
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
-  
     <application
+        android:theme="@style/AppTheme.NoActionBar"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        >
+        <activity android:name=".presentation.activities.RegisterActivity"
+            >
+        </activity>
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -26,10 +29,10 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name="com.example.photoeditor.presentation.activities.OpenCameraActivity"></activity>
-        <activity android:name="com.example.photoeditor.presentation.activities.HomeActivity"></activity>
+        <activity android:name=".presentation.activities.OpenCameraActivity" />
+        <activity android:name=".presentation.activities.HomeActivity" />
         <activity
-            android:name="com.example.photoeditor.presentation.activities.MainActivity"
+            android:name=".presentation.activities.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

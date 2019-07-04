@@ -33,9 +33,16 @@ public class MainActivity extends AppCompatActivity {
         final String password = passwordLogin.getText().toString();
 
 
-
-        UserController loginController = new UserController(MainActivity.this);
-        loginController.login(username, password);
+        if(!username.isEmpty() && !password.isEmpty()) {
+            UserController loginController = new UserController(MainActivity.this);
+            loginController.login(username, password);
+        }else{
+            Toast.makeText(this,"Por favor llenar todos los campos", Toast.LENGTH_LONG).show();
+        }
+    }
+    public void Register(View view){
+        Intent i= new Intent(this, RegisterActivity.class);
+        this.startActivity(i);
     }
 
     public void attemptLogin(String name, boolean ok) {
@@ -51,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             //LoginActivity.this.finish();
         }else{
             AlertDialog.Builder alerta = new AlertDialog.Builder(MainActivity.this);
-            alerta.setMessage("FAIL LOGIN:User does not exist or password is wrong")
+            alerta.setMessage("FAIL LOGIN: User does not exist or password is wrong")
                     .setNegativeButton("Retry",null)
                     .create()
                     .show();
