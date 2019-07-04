@@ -29,8 +29,10 @@ public class RegisterActivity extends AppCompatActivity {
 
     public void RegisterButton(View view){
         UserController userController= new UserController(this);
-        boolean reg= userController.register(name.getText().toString(),username.getText().toString(),
+        userController.register(name.getText().toString(),username.getText().toString(),
                 email.getText().toString(),password.getText().toString());
+    }
+    public void createdUser(boolean reg){
         if(reg){
             AlertDialog.Builder alerta = new AlertDialog.Builder(this);
             alerta.setMessage("Usuario creado satisfactoriamente")

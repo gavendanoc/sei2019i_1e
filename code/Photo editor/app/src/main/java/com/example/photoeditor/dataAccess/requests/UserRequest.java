@@ -26,7 +26,7 @@ public class UserRequest extends StringRequest {
     }
 
 
-    public static Map<String, String > selectByUsernameAndPassword(String username, String password){
+    public static Map<String, String > selecByUsernameAndPassword(String username, String password){
         Object[] args = {username, password};
         String query = UserQueries.SelecByUsernameAndPassword.getFormat(args);
         String type = UserQueries.SelecByUsernameAndPassword.getType();
@@ -38,8 +38,9 @@ public class UserRequest extends StringRequest {
     }
     public static Map<String,String> insertUser(UserModel user){
         Object[] args = {user.getName(),user.getUsername(),user.getEmail(),user.getPassword()};
-        String query= UserQueries.insertUser.getFormat(args);
-        String type= UserQueries.insertUser.getType();
+        String query= UserQueries.InsertUser.getFormat(args);
+        String type= UserQueries.InsertUser.getType();
+
         Map<String, String > parameter = new HashMap<>();
         parameter.put(RequestFields.QUERY.getKey(), query);
         parameter.put(RequestFields.TYPE.getKey(), type);

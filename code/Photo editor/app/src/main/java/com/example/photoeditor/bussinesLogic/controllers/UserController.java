@@ -5,6 +5,7 @@ import android.content.Context;
 import com.example.photoeditor.dataAccess.models.UserModel;
 import com.example.photoeditor.dataAccess.repositories.UserRepository;
 import com.example.photoeditor.presentation.activities.MainActivity;
+import com.example.photoeditor.presentation.activities.RegisterActivity;
 
 
 public class UserController {
@@ -24,14 +25,18 @@ public class UserController {
         userRepository.getByUsernameAndPassword(loginUser, this);
     }
 
-    public boolean register(String name,String username, String email, String password) {
+    public void register(String name,String username, String email, String password) {
         UserModel user=new UserModel();
         user.setName(name);
         user.setUsername(username);
         user.setEmail(email);
         user.setPassword(password);
         UserRepository userRepo= new UserRepository(context);
-        return userRepo.insertUser(user,this);
+        userRepo.insertUser(user,this);
+    }
+    public void regSuccess(boolean r){
+        RegisterActivity registerRet=  (RegisterActivity) context;
+        registerRet.createdUser(r);
     }
     public void loginLogic (UserModel user){
         MainActivity loginActivity =  (MainActivity) context;
