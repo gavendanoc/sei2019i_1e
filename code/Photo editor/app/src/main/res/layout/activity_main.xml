@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<AbsoluteLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BC2D2F31"
-    android:orientation="vertical"
+    android:background="#77CFE9"
     android:paddingLeft="25dp"
     android:paddingTop="25dp"
     android:paddingRight="25dp"
     android:paddingBottom="25dp"
-    tools:context=".presentation.activities.MainActivity"
+    tools:actionBarNavMode="standard"
 
-    >
+    tools:context=".presentation.activities.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_x="108dp"
+        android:layout_y="47dp"
         android:text="Photos"
         android:textSize="45sp"
         android:textStyle="bold"
@@ -31,23 +34,43 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginTop="40dp"
+        android:layout_x="-1dp"
+        android:layout_y="366dp"
         android:background="@android:color/background_light"
-        android:hint="Username"/>
+        android:hint="Username"
+        android:singleLine="true"
+        android:textAllCaps="false" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginTop="30dp"
+        android:layout_x="-1dp"
+        android:layout_y="438dp"
         android:background="@android:color/background_light"
         android:hint="Password"
         tools:ignore="DuplicateIds" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="317dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50sp"
-        android:text="Login"
-        android:onClick="Login"/>
+        android:layout_x="23dp"
+        android:layout_y="501dp"
+        android:backgroundTint="#E7E7E8"
+        android:onClick="Login"
+        android:text="Login" />
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="193dp"
+        android:layout_height="163dp"
+        android:layout_x="92dp"
+        android:layout_y="151dp"
+        app:srcCompat="@mipmap/ic_launcher_foreground"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="178dp"
+        tools:ignore="VectorDrawableCompat" />
+
+</AbsoluteLayout>
