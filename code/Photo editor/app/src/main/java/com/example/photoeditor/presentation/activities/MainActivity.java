@@ -37,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
         UserController loginController = new UserController(MainActivity.this);
         loginController.login(username, password);
     }
+    public void Register(View view){
+        Intent i= new Intent(this, RegisterActivity.class);
+        this.startActivity(i);
+    }
 
     public void attemptLogin(String name, boolean ok) {
         if (ok){

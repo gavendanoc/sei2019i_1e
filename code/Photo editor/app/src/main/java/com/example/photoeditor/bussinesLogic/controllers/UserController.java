@@ -24,6 +24,15 @@ public class UserController {
         userRepository.getByUsernameAndPassword(loginUser, this);
     }
 
+    public boolean register(String name,String username, String email, String password) {
+        UserModel user=new UserModel();
+        user.setName(name);
+        user.setUsername(username);
+        user.setEmail(email);
+        user.setPassword(password);
+        UserRepository userRepo= new UserRepository(context);
+        return userRepo.insertUser(user,this);
+    }
     public void loginLogic (UserModel user){
         MainActivity loginActivity =  (MainActivity) context;
         if (user != null){

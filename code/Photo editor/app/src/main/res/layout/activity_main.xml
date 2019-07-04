@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Photos"
+        android:text="@string/photos"
         android:textSize="45sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -32,7 +32,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="40dp"
         android:background="@android:color/background_light"
-        android:hint="Username"/>
+        android:hint="@string/username"/>
 
     <EditText
         android:id="@+id/password"
@@ -40,14 +40,24 @@
         android:layout_height="40dp"
         android:layout_marginTop="30dp"
         android:background="@android:color/background_light"
-        android:hint="Password"
+        android:hint="@string/password"
         tools:ignore="DuplicateIds" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50sp"
-        android:text="Login"
+        android:text="@string/login"
         android:onClick="Login"/>
+
+    <TextView
+        android:layout_marginTop="35dp"
+        android:id="@+id/registerOption"
+        android:textColor="@android:color/background_dark"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:textAlignment="center"
+        android:onClick="Register"
+        android:text="@string/registrate" />
 
 </LinearLayout>
