@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<AbsoluteLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#77CFE9"
+    android:orientation="vertical"
     android:paddingLeft="25dp"
     android:paddingTop="25dp"
     android:paddingRight="25dp"
     android:paddingBottom="25dp"
-    tools:actionBarNavMode="standard"
 
+    tools:actionBarNavMode="standard"
     tools:context=".presentation.activities.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_x="108dp"
-        android:layout_y="47dp"
-        android:text="Photos"
+        android:text="@string/photos"
         android:textSize="45sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="193dp"
+        android:layout_height="163dp"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/ic_launcher_foreground" />
 
     <EditText
         android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginTop="40dp"
-        android:layout_x="-1dp"
-        android:layout_y="366dp"
         android:background="@android:color/background_light"
         android:hint="Username"
         android:singleLine="true"
@@ -46,43 +46,29 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginTop="30dp"
-        android:layout_x="-1dp"
-        android:layout_y="438dp"
         android:background="@android:color/background_light"
         android:hint="@string/password"
-        tools:ignore="DuplicateIds" />
+        android:inputType="textPassword" />
 
     <Button
-        android:layout_width="317dp"
+        android:layout_width="75dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50sp"
-        android:layout_x="23dp"
-        android:layout_y="501dp"
+        android:layout_marginTop="50dp"
         android:backgroundTint="#E7E7E8"
+        android:layout_gravity="center"
         android:onClick="Login"
         android:text="Login" />
 
-   <TextView
-        android:layout_marginTop="35dp"
+    <TextView
         android:id="@+id/registerOption"
-        android:textColor="@android:color/background_dark"
         android:layout_width="match_parent"
         android:layout_height="25dp"
-        android:textAlignment="center"
+        android:layout_marginTop="35dp"
         android:onClick="Register"
-        android:text="@string/registrate" />
-  
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="193dp"
-        android:layout_height="163dp"
-        android:layout_x="92dp"
-        android:layout_y="151dp"
-        app:srcCompat="@mipmap/ic_launcher_foreground"
-        tools:layout_editor_absoluteX="128dp"
-        tools:layout_editor_absoluteY="178dp"
-        tools:ignore="VectorDrawableCompat" />
+        android:text="@string/registrate"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark" />
 
-</AbsoluteLayout>
+</LinearLayout>
 
    
