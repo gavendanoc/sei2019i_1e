@@ -44,4 +44,12 @@
         android:text="Camara"
         android:textSize="18sp" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100sp"
+        android:onClick="SelectImage"
+        android:text="Seleccionar Imagen"
+        android:textSize="18sp" />
+
 </LinearLayout>

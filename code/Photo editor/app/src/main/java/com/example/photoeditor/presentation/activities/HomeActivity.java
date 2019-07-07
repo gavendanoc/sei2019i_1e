@@ -131,6 +131,11 @@ public class HomeActivity extends AppCompatActivity {
         }
     }*/
 
+    public void SelectImage(View view){
+        Intent selected= new Intent(HomeActivity.this, EditActivity.class);
+        startActivity(selected);
+    }
+
 
     public void Back(View view){
         Intent back= new Intent(this, MainActivity.class);
