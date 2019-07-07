@@ -29,6 +29,7 @@ import java.util.Date;
 
 public class HomeActivity extends AppCompatActivity {
 
+    final static int REQUEST_IMAGE = 100;
     final static int REQUEST_TAKE_PHOTO=0;
     int camera_permissions = 0;
     String currentPhotoPath;
@@ -89,13 +90,23 @@ public class HomeActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(resultCode == RESULT_OK){
-            if(requestCode == REQUEST_TAKE_PHOTO){
-                Intent viewPhoto = new Intent(this, OpenCameraActivity.class);
-                viewPhoto.putExtra("photo",photoURI);
-                startActivity(viewPhoto);
-                galleryAddPic();
-                //File file = new File(currentPhotoPath);
-                //notifyMediaStoreScanner(file);
+            switch (requestCode) {
+                case REQUEST_TAKE_PHOTO: {
+                    Intent viewPhoto = new Intent(this, OpenCameraActivity.class);
+                    viewPhoto.putExtra("photo", photoURI);
+                    startActivity(viewPhoto);
+                }
+                case REQUEST_IMAGE:{
+                    try {
+                        Uri selectedImage = data.getData();
+                        Intent viewPhoto = new Intent(this, OpenCameraActivity.class);
+                        viewPhoto.putExtra("photo",selectedImage);
+                        startActivity(viewPhoto);
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         }
     }
@@ -108,34 +119,11 @@ public class HomeActivity extends AppCompatActivity {
         this.sendBroadcast(mediaScanIntent);
     }
 
-    /*public final void notifyMediaStoreScanner(final File file) {
-        try {
-            MediaStore.Images.Media.insertImage(this.getContentResolver(),
-                    file.getAbsolutePath(), file.getName(), null);
-            this.sendBroadcast(new Intent(
-                    Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.fromFile(file)));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-    }*/
-
-    /*private void scanGallery(final Context cntx, String path) {
-        try {
-            MediaScannerConnection.scanFile(cntx, new String[] { path },null, new MediaScannerConnection.OnScanCompletedListener() {
-                public void onScanCompleted(String path, Uri uri) {
-                    //unimplemeted method
-                }
-            });
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }*/
-
     public void SelectImage(View view){
-        Intent selected= new Intent(HomeActivity.this, EditActivity.class);
-        startActivity(selected);
+        Intent intent = new Intent(Intent.ACTION_PICK);
+        intent.setType("image/*");
+        startActivityForResult(intent, REQUEST_IMAGE);
     }
-
 
     public void Back(View view){
         Intent back= new Intent(this, MainActivity.class);
