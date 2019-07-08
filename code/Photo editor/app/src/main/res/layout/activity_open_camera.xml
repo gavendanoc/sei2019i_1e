@@ -5,12 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.photoeditor.presentation.activities.OpenCameraActivity">
+    tools:context="com.example.photoeditor.presentation.activities.OpenCameraActivity"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/cardview_dark_background">
 
     <ImageView
         android:id="@+id/photo"
-        android:layout_weight="9"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        app:srcCompat="@android:drawable/btn_dialog"/>
+        android:layout_height="569dp"
+        app:srcCompat="@android:drawable/btn_dialog"
+        />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="horizontal">
+        <LinearLayout
+            android:id="@+id/FilterList"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"/>
+    </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
