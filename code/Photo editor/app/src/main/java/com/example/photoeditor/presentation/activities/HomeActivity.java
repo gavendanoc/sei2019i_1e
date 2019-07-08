@@ -31,6 +31,7 @@ import java.util.Date;
 
 public class HomeActivity extends AppCompatActivity {
 
+    final static int REQUEST_IMAGE = 100;
     final static int REQUEST_TAKE_PHOTO=0;
     final int camera_permissions = 0;
     final int storage_permissions=1;
@@ -112,13 +113,26 @@ public class HomeActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(resultCode == RESULT_OK){
-            if(requestCode == REQUEST_TAKE_PHOTO){
-                Intent viewPhoto = new Intent(this, OpenCameraActivity.class);
-                viewPhoto.putExtra("photo",photoURI);
-                //galleryAddPic();
-                notifyMediaStoreScanner(photoFile);
-                //scanGallery(this,currentPhotoPath);
-                startActivity(viewPhoto);
+            switch (requestCode) {
+                case REQUEST_TAKE_PHOTO: {
+                    Intent viewPhoto = new Intent(this, OpenCameraActivity.class);
+                    viewPhoto.putExtra("photo", photoURI);
+                    //galleryAddPic();
+                    notifyMediaStoreScanner(photoFile);
+                    //scanGallery(this,currentPhotoPath);
+                    startActivity(viewPhoto);
+                }
+                case REQUEST_IMAGE:{
+                    try {
+                        Uri selectedImage = data.getData();
+                        Intent viewPhoto = new Intent(this, OpenCameraActivity.class);
+                        viewPhoto.putExtra("photo",selectedImage);
+                        startActivity(viewPhoto);
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         }
     }
@@ -135,6 +149,7 @@ public class HomeActivity extends AppCompatActivity {
             sendBroadcast(intent);
         }
     }
+
 
     public final void notifyMediaStoreScanner(final File file) {
         try {
@@ -154,6 +169,12 @@ public class HomeActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+      
+    public void SelectImage(View view){
+        Intent intent = new Intent(Intent.ACTION_PICK);
+        intent.setType("image/*");
+        startActivityForResult(intent, REQUEST_IMAGE);
     }
 
     public void Back(View view){
