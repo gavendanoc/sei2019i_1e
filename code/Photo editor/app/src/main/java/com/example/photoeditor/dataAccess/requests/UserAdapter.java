@@ -32,7 +32,8 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolderGen>
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolderGen viewHolderGen, int i) {
-        viewHolderGen.asignar(userList.get(i));
+        UserModel userModel= userList.get(i);
+        viewHolderGen.usuario.setText(userModel.getName());
     }
 
     @Override
@@ -45,10 +46,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolderGen>
         public ViewHolderGen(@NonNull View itemView) {
             super(itemView);
             usuario= itemView.findViewById(R.id.userText);
-        }
-
-        public void asignar(UserModel userModel) {
-            usuario.setText(userModel.getName());
         }
     }
 }

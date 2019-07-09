@@ -15,8 +15,13 @@ import com.example.photoeditor.dataAccess.requests.UserAdapter;
 import java.util.ArrayList;
 
 public class RolesDisplayActivity extends AppCompatActivity {
-    private ArrayList<UserModel> usuarios;
     private RecyclerView userList;
+
+
+    public RecyclerView getUserList() {
+        return userList;
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +32,8 @@ public class RolesDisplayActivity extends AppCompatActivity {
         userList.setLayoutManager(
                 new LinearLayoutManager(
                         this,LinearLayoutManager.VERTICAL,false));
-        usuarios= userController.userList();
-        UserAdapter adapter= new UserAdapter(usuarios);
-        userList.setAdapter(adapter);
+        userController.userList();
+        System.out.println("WORKS LAYOUT");
     }
 
 }

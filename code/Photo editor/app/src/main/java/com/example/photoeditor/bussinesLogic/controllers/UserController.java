@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.example.photoeditor.dataAccess.models.UserModel;
 import com.example.photoeditor.dataAccess.repositories.UserRepository;
+import com.example.photoeditor.dataAccess.requests.UserAdapter;
 import com.example.photoeditor.presentation.activities.MainActivity;
 import com.example.photoeditor.presentation.activities.RegisterActivity;
 import com.example.photoeditor.presentation.activities.RolesDisplayActivity;
@@ -50,8 +51,15 @@ public class UserController {
             loginActivity.attemptLogin(null, false);
         }
     }
-    public ArrayList<UserModel> userList(){
+    public void userList(){
         UserRepository userRepository= new UserRepository(context);
-        return userRepository.getAllUsers();
+        userRepository.getAllUsers(this);
+    }
+
+    public void adapterAssigner(UserAdapter adapter) {
+        System.out.println("WORKS PREVIOUS ADAPTER");
+        RolesDisplayActivity rolesDisplayActivity= (RolesDisplayActivity) context;
+        System.out.println("WORKS AFTER ADAPTER");
+        rolesDisplayActivity.getUserList().setAdapter(adapter);
     }
 }
