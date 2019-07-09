@@ -6,6 +6,10 @@ import com.example.photoeditor.dataAccess.models.UserModel;
 import com.example.photoeditor.dataAccess.repositories.UserRepository;
 import com.example.photoeditor.presentation.activities.MainActivity;
 import com.example.photoeditor.presentation.activities.RegisterActivity;
+import com.example.photoeditor.presentation.activities.RolesDisplayActivity;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 
 public class UserController {
@@ -45,5 +49,9 @@ public class UserController {
         } else {
             loginActivity.attemptLogin(null, false);
         }
+    }
+    public ArrayList<UserModel> userList(){
+        UserRepository userRepository= new UserRepository(context);
+        return userRepository.getAllUsers();
     }
 }

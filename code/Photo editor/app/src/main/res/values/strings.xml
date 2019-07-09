@@ -10,4 +10,6 @@
     <string name="e_mail">e-mail</string>
     <string name="registrate">Registrate</string>
     <string name="photos">Photos</string>
+    <string name="volver">volver</string>
+    <string name="camara">Camara</string>
 </resources>

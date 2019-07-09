@@ -10,8 +10,11 @@ import com.example.photoeditor.dataAccess.databaseEnums.tableFields.UserFields;
 import com.example.photoeditor.dataAccess.models.UserModel;
 import com.example.photoeditor.dataAccess.requests.UserRequest;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 public class UserRepository {
     private Context context;
@@ -25,9 +28,7 @@ public class UserRepository {
             @Override
             public void onResponse(String response) {
                 try {
-                    System.out.println("Works here");
                     JSONObject jsonResponse = new JSONObject(response);
-                    System.out.println("here too");
                     boolean r=jsonResponse.getBoolean("success");
                     if(r){
                         userController.regSuccess(r);
@@ -80,5 +81,42 @@ public class UserRepository {
         RequestQueue cola = Volley.newRequestQueue(context);
         cola.add(r);
     }
+        //THIS METHOD DOESNT WORKSSSS
+    public ArrayList<UserModel> getAllUsers() {
+        final ArrayList<UserModel> userList = new ArrayList<>();
+        Response.Listener<String> response= new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject jsonresponse = new JSONObject(response);
+                    //JSONArray jsonresponse = jsonObject.getJSONArray(response);
+                    System.out.println("after Response");
+                    for (int i=0; i<jsonresponse.length();i++){
+                        System.out.println("works here 2");
+                        UserModel user = new UserModel();
+                        System.out.println("works here 3");
+                        user.setId(jsonresponse.getInt(UserFields.ID.getKey()));
+                        user.setUsername(jsonresponse.getString(UserFields.USERNAME.getKey()));
+                        user.setName( jsonresponse.getString(UserFields.NAME.getKey()));
+                        user.setPassword(jsonresponse.getString(UserFields.PASSWORD.getKey()));
+                        System.out.println(user.getName());
+                        System.out.println("works here 4");
+                        userList.add(user);
+                        System.out.println("works here 5");
+                    }
+                }catch (JSONException ex){
+                    System.out.println("debug issue");
+                    ex.getMessage();
 
+                }
+            }
+        };
+        UserRequest r = new UserRequest(UserRequest.getUser(),response);
+
+        System.out.println(response);
+        RequestQueue cola = Volley.newRequestQueue(context);
+        cola.add(r);
+        //System.out.println(userList.get(0).getName());
+        return userList;
+    }
 }

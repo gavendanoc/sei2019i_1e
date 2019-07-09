@@ -8,6 +8,7 @@ import com.example.photoeditor.dataAccess.databaseEnums.tableFields.UserFields;
 import com.example.photoeditor.dataAccess.databaseEnums.tableQueries.UserQueries;
 import com.example.photoeditor.dataAccess.models.UserModel;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -40,6 +41,16 @@ public class UserRequest extends StringRequest {
         Object[] args = {user.getName(),user.getUsername(),user.getEmail(),user.getPassword()};
         String query= UserQueries.InsertUser.getFormat(args);
         String type= UserQueries.InsertUser.getType();
+
+        Map<String, String > parameter = new HashMap<>();
+        parameter.put(RequestFields.QUERY.getKey(), query);
+        parameter.put(RequestFields.TYPE.getKey(), type);
+        return parameter;
+    }
+    public static Map<String,String> getUser(){
+        String query= UserQueries.GetUsers.getFormat(null);
+        System.out.println(query);
+        String type= UserQueries.GetUsers.getType();
 
         Map<String, String > parameter = new HashMap<>();
         parameter.put(RequestFields.QUERY.getKey(), query);

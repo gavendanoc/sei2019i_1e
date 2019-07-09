@@ -10,15 +10,15 @@
     android:paddingTop="25dp"
     android:paddingRight="25dp"
     android:paddingBottom="25dp"
-
     tools:context=".presentation.activities.HomeActivity">
 
     <TextView
+        android:id="@+id/WelcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="100dp"
-        android:text="Welcome"
+        android:text=""
         android:textColor="?attr/colorBackgroundFloating"
         android:textSize="45sp"
         android:textStyle="bold"
@@ -28,20 +28,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100sp"
-        android:baselineAligned="false"
-        android:onClick="Back"
-        android:text="volver"
-        android:textSize="18sp" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100sp"
+        android:layout_gravity="center"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="190dp"
         android:onClick="Camera"
-        android:text="Camara"
+        android:text="@string/camara"
         android:textSize="18sp" />
 
 </LinearLayout>
