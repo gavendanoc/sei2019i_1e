@@ -13,8 +13,7 @@ public enum UserQueries {
             "insertUser", "INSERT INTO " +TableNames.Users.getKey()+
             " (name,username,email,password,id_role,status) VALUES ('%s','%s','%s','%s',3,1)"),
 
-    GetUsers("getUsers", "SELECT ("+UserFields.ID.getKey()+","+UserFields.USERNAME.getKey()+","+UserFields.NAME.getKey()+","+UserFields.PASSWORD.getKey()+
-            ") FROM "+ TableNames.Users.getKey())
+    GetUsers("getUsers", "SELECT* FROM "+ TableNames.Users.getKey())
 
     ;
 

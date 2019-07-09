@@ -38,6 +38,9 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolderGen>
 
     @Override
     public int getItemCount() {
+        if(this.userList.isEmpty()){
+            return 0;
+        }
         return this.userList.size();
     }
 
@@ -45,6 +48,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolderGen>
         TextView usuario;
         public ViewHolderGen(@NonNull View itemView) {
             super(itemView);
+            System.out.println("HERE MISTAKE");
             usuario= itemView.findViewById(R.id.userText);
         }
     }

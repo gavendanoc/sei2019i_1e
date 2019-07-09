@@ -85,10 +85,10 @@ public class UserRepository {
     }
         //THIS METHOD DOESNT WORKSSSS
     public ArrayList<UserModel> getAllUsers(final UserController userController) {
-
         Response.Listener<String> response= new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                System.out.println(response);
                 try {
                     JSONArray jarray = new JSONArray(response);
                     System.out.println("YES");
@@ -101,6 +101,7 @@ public class UserRepository {
                         user.setPassword(userTemp.getString(UserFields.PASSWORD.getKey()));
                         userList.add(user);
                     }
+                    System.out.println(userList.size());
                 }catch (JSONException ex){
                     System.out.println("debug issue");
                     ex.getMessage();
@@ -111,7 +112,6 @@ public class UserRepository {
         UserRequest r = new UserRequest(UserRequest.getUser(),response);
         RequestQueue cola = Volley.newRequestQueue(context);
         cola.add(r);
-        System.out.println(userList.size());
         return userList;
     }
 }

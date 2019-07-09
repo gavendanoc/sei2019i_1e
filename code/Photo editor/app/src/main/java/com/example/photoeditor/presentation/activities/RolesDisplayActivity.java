@@ -18,6 +18,21 @@ public class RolesDisplayActivity extends AppCompatActivity {
     private RecyclerView userList;
     private ArrayList<UserModel> userModels;
 
+    public ArrayList<UserModel> getUserModels() {
+        return userModels;
+    }
+
+    public void setUserModels(ArrayList<UserModel> userModels) {
+        this.userModels = userModels;
+    }
+
+    public RecyclerView getUserList() {
+        return userList;
+    }
+
+    public void setUserList(RecyclerView userList) {
+        this.userList = userList;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +44,9 @@ public class RolesDisplayActivity extends AppCompatActivity {
                 new LinearLayoutManager(
                         this,LinearLayoutManager.VERTICAL,false));
         userModels=userController.userList();
-        UserAdapter adapter= new UserAdapter(userModels);
-        userList.setAdapter(adapter);
-        System.out.println("WORKS LAYOUT");
+        UserAdapter userAdapter= new UserAdapter(userModels);
+        userList.setAdapter(userAdapter);
     }
+
 
 }

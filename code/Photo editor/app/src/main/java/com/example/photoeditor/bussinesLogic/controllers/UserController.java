@@ -54,6 +54,6 @@ public class UserController {
     public ArrayList<UserModel> userList(){
         UserRepository userRepository= new UserRepository(context);
         return userRepository.getAllUsers(this);
-
     }
+
 }
