@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 public class UserRepository {
     private Context context;
-
+    ArrayList<UserModel> userList = new ArrayList<>();
     public UserRepository(Context context) {
         this.context = context;
     }
@@ -84,8 +84,8 @@ public class UserRepository {
         cola.add(r);
     }
         //THIS METHOD DOESNT WORKSSSS
-    public void getAllUsers(final UserController userController) {
-        final ArrayList<UserModel> userList = new ArrayList<UserModel>();
+    public ArrayList<UserModel> getAllUsers(final UserController userController) {
+
         Response.Listener<String> response= new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -108,9 +108,10 @@ public class UserRepository {
                 }
             }
         };
-
         UserRequest r = new UserRequest(UserRequest.getUser(),response);
         RequestQueue cola = Volley.newRequestQueue(context);
         cola.add(r);
+        System.out.println(userList.size());
+        return userList;
     }
 }

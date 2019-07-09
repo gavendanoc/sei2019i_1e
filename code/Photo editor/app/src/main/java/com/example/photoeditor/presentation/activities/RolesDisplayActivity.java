@@ -16,11 +16,7 @@ import java.util.ArrayList;
 
 public class RolesDisplayActivity extends AppCompatActivity {
     private RecyclerView userList;
-
-
-    public RecyclerView getUserList() {
-        return userList;
-    }
+    private ArrayList<UserModel> userModels;
 
 
     @Override
@@ -32,7 +28,9 @@ public class RolesDisplayActivity extends AppCompatActivity {
         userList.setLayoutManager(
                 new LinearLayoutManager(
                         this,LinearLayoutManager.VERTICAL,false));
-        userController.userList();
+        userModels=userController.userList();
+        UserAdapter adapter= new UserAdapter(userModels);
+        userList.setAdapter(adapter);
         System.out.println("WORKS LAYOUT");
     }
 

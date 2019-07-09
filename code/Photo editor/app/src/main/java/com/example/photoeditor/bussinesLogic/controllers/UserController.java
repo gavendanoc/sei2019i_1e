@@ -51,15 +51,9 @@ public class UserController {
             loginActivity.attemptLogin(null, false);
         }
     }
-    public void userList(){
+    public ArrayList<UserModel> userList(){
         UserRepository userRepository= new UserRepository(context);
-        userRepository.getAllUsers(this);
-    }
+        return userRepository.getAllUsers(this);
 
-    public void adapterAssigner(UserAdapter adapter) {
-        System.out.println("WORKS PREVIOUS ADAPTER");
-        RolesDisplayActivity rolesDisplayActivity= (RolesDisplayActivity) context;
-        System.out.println("WORKS AFTER ADAPTER");
-        rolesDisplayActivity.getUserList().setAdapter(adapter);
     }
 }
