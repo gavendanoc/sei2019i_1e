@@ -48,7 +48,7 @@
      <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100sp"
+        android:layout_marginTop="50dp"
         android:onClick="SelectImage"
         android:text="Seleccionar Imagen"
         android:textSize="18sp" />

@@ -84,7 +84,7 @@ public class UserRepository {
         cola.add(r);
     }
         //THIS METHOD DOESNT WORKSSSS
-    public ArrayList<UserModel> getAllUsers(final UserController userController) {
+    public void getAllUsers(final UserController userController) {
         Response.Listener<String> response= new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -101,7 +101,7 @@ public class UserRepository {
                         user.setPassword(userTemp.getString(UserFields.PASSWORD.getKey()));
                         userList.add(user);
                     }
-                    System.out.println(userList.size());
+                    userController.retunOfUsers(userList);
                 }catch (JSONException ex){
                     System.out.println("debug issue");
                     ex.getMessage();
@@ -112,6 +112,5 @@ public class UserRepository {
         UserRequest r = new UserRequest(UserRequest.getUser(),response);
         RequestQueue cola = Volley.newRequestQueue(context);
         cola.add(r);
-        return userList;
     }
 }

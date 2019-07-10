@@ -43,9 +43,7 @@ public class RolesDisplayActivity extends AppCompatActivity {
         userList.setLayoutManager(
                 new LinearLayoutManager(
                         this,LinearLayoutManager.VERTICAL,false));
-        userModels=userController.userList();
-        UserAdapter userAdapter= new UserAdapter(userModels);
-        userList.setAdapter(userAdapter);
+        userController.userList();
     }
 
 

@@ -1,6 +1,7 @@
 package com.example.photoeditor.dataAccess.requests;
 
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,7 +27,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolderGen>
     @Override
     public ViewHolderGen onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.userlist_temp, viewGroup, false);
+                .inflate(R.layout.tarjeta_temp, viewGroup, false);
         return new ViewHolderGen(v);
     }
 
@@ -49,7 +50,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolderGen>
         public ViewHolderGen(@NonNull View itemView) {
             super(itemView);
             System.out.println("HERE MISTAKE");
-            usuario= itemView.findViewById(R.id.userText);
+            usuario= itemView.findViewById(R.id.userTextF);
         }
     }
 }

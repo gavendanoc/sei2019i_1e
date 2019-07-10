@@ -15,10 +15,11 @@ import java.util.ArrayList;
 
 public class UserController {
     private Context context;
-
+    private ArrayList<UserModel> users;
 
     public UserController(Context context) {
         this.context = context;
+        users= new ArrayList<>();
     }
 
     public void login (String username, String password){
@@ -51,9 +52,18 @@ public class UserController {
             loginActivity.attemptLogin(null, false);
         }
     }
-    public ArrayList<UserModel> userList(){
+    public void userList(){
         UserRepository userRepository= new UserRepository(context);
-        return userRepository.getAllUsers(this);
+        userRepository.getAllUsers(this);
+    }
+
+    public void retunOfUsers(ArrayList<UserModel> userList) {
+        this.users=userList;
+        System.out.println(users.get(0).getUsername()+" OUTSIDE "+users.get(0).getPassword());
+        RolesDisplayActivity rolesDisplayActivity= (RolesDisplayActivity) context;
+        rolesDisplayActivity.setUserModels(this.users);
+        UserAdapter userAdapter= new UserAdapter(rolesDisplayActivity.getUserModels());
+        rolesDisplayActivity.getUserList().setAdapter(userAdapter);
     }
 
 }
