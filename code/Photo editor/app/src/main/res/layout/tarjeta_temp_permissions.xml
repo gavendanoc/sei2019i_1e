@@ -38,12 +38,14 @@
                 android:id="@+id/Payment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/userText"
-                android:layout_alignRight="@+id/userText"
+                android:layout_alignEnd="@+id/permissionsTextF"
+                android:layout_alignRight="@+id/permissionsTextF"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="-183dp"
                 android:layout_marginRight="-183dp"
+                android:checked="false"
                 android:text="@string/premium" />
+
 
         </RelativeLayout>
 

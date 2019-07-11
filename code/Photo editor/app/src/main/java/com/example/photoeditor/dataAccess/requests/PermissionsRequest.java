@@ -28,9 +28,9 @@ public class PermissionsRequest extends StringRequest {
 
 
     public static Map<String,String> getAllPermissions(){
-        String query= PermissionsQueries.SelectAllPermisionsWithJoin.getFormat(null);
+        String query= PermissionsQueries.SelectAllPermissions.getFormat(null);
         System.out.println(query);
-        String type= PermissionsQueries.SelectAllPermisionsWithJoin.getType();
+        String type= PermissionsQueries.SelectAllPermissions.getType();
 
         Map<String, String > parameter = new HashMap<>();
         parameter.put(RequestFields.QUERY.getKey(), query);

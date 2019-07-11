@@ -12,7 +12,7 @@ public enum PermissionsQueries {
             "SelectAllPermissions",
             "SELECT* FROM " + TableNames.Permissions.getKey()),
 
-    SelectAllPermisionsWithJoin ("SelectAllPermisionsWithJoin",
+    SelectAllPermissionsWithJoin ("SelectAllPermissionsWithJoin",
             "SELECT " + TableNames.Permissions.getKey() + "." + PermissionsFields.ID.getKey() + ", " +
                     TableNames.Roles.getKey() + "." + RolesFields.TYPE.getKey() + ", " +
                     TableNames.Parameters.getKey() + "." + ParametersFields.NAME.getKey() + ", " +

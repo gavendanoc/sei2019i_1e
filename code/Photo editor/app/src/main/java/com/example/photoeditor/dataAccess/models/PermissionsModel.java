@@ -6,7 +6,7 @@ public class PermissionsModel {
     private int idParameter;
     private int status;
 
-    public PermissionsModel(String idRol, String idParameter, int status) {
+    public PermissionsModel(int idRol, int idParameter, int status) {
         this.idRol = idRol;
         this.idParameter = idParameter;
         this.status = status;
@@ -23,19 +23,19 @@ public class PermissionsModel {
         this.id = id;
     }
 
-    public String getIdRol() {
+    public int getIdRol() {
         return idRol;
     }
 
-    public void setIdRol(String idRol) {
+    public void setIdRol(int idRol) {
         this.idRol = idRol;
     }
 
-    public String getIdParameter() {
+    public int getIdParameter() {
         return idParameter;
     }
 
-    public void setIdParameter(String idParameter) {
+    public void setIdParameter(int idParameter) {
         this.idParameter = idParameter;
     }
 

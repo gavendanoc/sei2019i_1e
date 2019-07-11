@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class PermissionsController {
 
     private Context context;
-    private ArrayList<PermissionsModel> permissions;
+    private ArrayList<PermissionsJoinModel> permissions;
 
 
     public PermissionsController(Context context) {
@@ -29,7 +29,7 @@ public class PermissionsController {
         permissionsRepository.getAllPermissions(this);
     }
 
-    public void retunOfPermissions(ArrayList<PermissionsModel> permissionsList) {
+    public void retunOfPermissions(ArrayList<PermissionsJoinModel> permissionsList) {
         this.permissions = permissionsList;
         PermissionsDisplayActivity permissionsDisplayActivity= (PermissionsDisplayActivity) context;
         permissionsDisplayActivity.setPermissionsModels(this.permissions);
