@@ -18,6 +18,8 @@
             android:name=".presentation.activities.PermissionsDisplayActivity"
             android:label="@string/title_activity_permissions_display"
             android:theme="@style/AppTheme.NoActionBar.NoActionBar"></activity>
+
+        <activity android:name=".presentation.activities.CardControlFinal"></activity>
         <activity android:name=".presentation.activities.RolesDisplayActivity" />
         <activity android:name=".presentation.activities.AdminControlPanelActivity" />
         <activity android:name=".presentation.activities.RegisterActivity" />

@@ -1,6 +1,7 @@
 package com.example.photoeditor.bussinesLogic.controllers;
 
 import android.content.Context;
+import android.widget.Toast;
 
 import com.example.photoeditor.dataAccess.models.UserModel;
 import com.example.photoeditor.dataAccess.repositories.UserRepository;
@@ -9,7 +10,6 @@ import com.example.photoeditor.presentation.activities.MainActivity;
 import com.example.photoeditor.presentation.activities.RegisterActivity;
 import com.example.photoeditor.presentation.activities.RolesDisplayActivity;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 
@@ -62,8 +62,21 @@ public class UserController {
         System.out.println(users.get(0).getUsername()+" OUTSIDE "+users.get(0).getPassword());
         RolesDisplayActivity rolesDisplayActivity= (RolesDisplayActivity) context;
         rolesDisplayActivity.setUserModels(this.users);
-        UserAdapter userAdapter= new UserAdapter(rolesDisplayActivity.getUserModels());
+        UserAdapter userAdapter= new UserAdapter(rolesDisplayActivity.getUserModels(),context);
         rolesDisplayActivity.getUserList().setAdapter(userAdapter);
     }
+    public void updateUser(int role, String username){
+        UserRepository userRepository= new UserRepository(context);
+        userRepository.updateUser(role,username,this);
+    }
 
+    public void returnUpdate(boolean success) {
+        RolesDisplayActivity rolesDisplayActivity = (RolesDisplayActivity) context;
+        if (success) {
+            Toast.makeText(rolesDisplayActivity, "Actualizado", Toast.LENGTH_LONG).show();
+        }
+        else{
+            Toast.makeText(rolesDisplayActivity, "NO Actualizado", Toast.LENGTH_LONG).show();
+        }
+    }
 }

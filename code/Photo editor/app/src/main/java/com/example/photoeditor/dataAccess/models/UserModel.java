@@ -87,4 +87,5 @@ public class UserModel {
     public void setStatus(int status) {
         this.status = status;
     }
+
 }

@@ -13,8 +13,9 @@ public enum UserQueries {
             "insertUser", "INSERT INTO " +TableNames.Users.getKey()+
             " (name,username,email,password,id_role,status) VALUES ('%s','%s','%s','%s',3,1)"),
 
-    GetUsers("getUsers", "SELECT* FROM "+ TableNames.Users.getKey())
-
+    GetUsers("getUsers", "SELECT* FROM "+ TableNames.Users.getKey()),
+    UpdateUsers("updateUsers", "UPDATE "+TableNames.Users.getKey()+" SET "+UserFields.ID_ROL.getKey()+"= %d WHERE " +
+            UserFields.USERNAME.getKey()+"= '%s'")
     ;
 
     private String type;

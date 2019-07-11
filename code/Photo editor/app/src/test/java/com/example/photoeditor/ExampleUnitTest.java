@@ -1,5 +1,7 @@
 package com.example.photoeditor;
 
+import com.example.photoeditor.presentation.activities.RegisterActivity;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -14,4 +16,21 @@ public class ExampleUnitTest {
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);
     }
+    @Test
+    public void checkEmail_isCorrect() {
+        assertEquals(false, RegisterActivity.checkEmail("prueba"));
+    }
+    @Test
+    public void checkEmail_isCorrect2() {
+        assertEquals(true, RegisterActivity.checkEmail("prueba@hotmail.com"));
+    }
+    @Test
+    public void password_isCorrect() {
+        assertEquals(true, RegisterActivity.checkPassword("password"));
+    }
+    @Test
+    public void password_isCorrect2() {
+        assertEquals(false, RegisterActivity.checkPassword("pass"));
+    }
+
 }

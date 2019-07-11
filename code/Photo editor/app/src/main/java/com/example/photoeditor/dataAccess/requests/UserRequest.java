@@ -57,4 +57,14 @@ public class UserRequest extends StringRequest {
         parameter.put(RequestFields.TYPE.getKey(), type);
         return parameter;
     }
+    public static Map<String,String> updateUser(int role,String username){
+        Object[] args = {role,username};
+        String query= UserQueries.UpdateUsers.getFormat(args);
+        System.out.println(query);
+        String type= UserQueries.UpdateUsers.getType();
+        Map<String, String > parameter = new HashMap<>();
+        parameter.put(RequestFields.QUERY.getKey(), query);
+        parameter.put(RequestFields.TYPE.getKey(), type);
+        return parameter;
+    }
 }
