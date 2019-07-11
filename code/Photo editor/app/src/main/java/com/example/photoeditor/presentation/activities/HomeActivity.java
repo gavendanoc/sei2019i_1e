@@ -121,6 +121,7 @@ public class HomeActivity extends AppCompatActivity {
                     notifyMediaStoreScanner(photoFile);
                     //scanGallery(this,currentPhotoPath);
                     startActivity(viewPhoto);
+                    break;
                 }
                 case REQUEST_IMAGE:{
                     try {
@@ -132,6 +133,7 @@ public class HomeActivity extends AppCompatActivity {
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
+                    break;
                 }
             }
         }
