@@ -25,7 +25,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolderGen>
     public UserAdapter(ArrayList<UserModel> userList, Context context) {
         this.userList = userList;
         this.context= context;
-
     }
 
     @NonNull
@@ -37,12 +36,29 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolderGen>
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolderGen viewHolderGen, int i) {
-        UserModel userModel= userList.get(i);
+    public void onBindViewHolder(@NonNull final ViewHolderGen viewHolderGen, int i) {
+        final UserModel userModel= userList.get(i);
         viewHolderGen.usuario.setText(userModel.getName());
         if(userModel.getId_role()==4){
            viewHolderGen.payment.setChecked(true);
         }
+        viewHolderGen.payment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                userModel.setName(viewHolderGen.usuario.getText().toString());
+                System.out.println("CLICKED");
+                if (viewHolderGen.payment.isEnabled()) {
+                    userModel.setId_role(4);
+                } else {
+                    viewHolderGen.payment.setChecked(false);
+                    userModel.setId_role(3);
+                }
+                System.out.println(userModel.getId_role()+" ROL USUARIO");
+                userModel.setUsername(getByName(userModel.getName()));
+                System.out.println(userModel.getUsername()+" VALOR USUARIO");
+                viewHolderGen.userController.updateUser(userModel.getId_role(),userModel.getUsername());
+            }
+        });
     }
 
     @Override
@@ -63,30 +79,14 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolderGen>
     public class ViewHolderGen extends RecyclerView.ViewHolder {
         TextView usuario;
         Switch payment;
-        UserModel user;
+        UserController userController;
+
         public ViewHolderGen(@NonNull View itemView) {
             super(itemView);
             payment= (Switch) itemView.findViewById(R.id.Payment);
             usuario= (TextView) itemView.findViewById(R.id.userTextF);
-            user= new UserModel();
-            user.setName(usuario.getText().toString());
-            final UserController userController= new UserController(context);
-            payment.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    System.out.println("CLICKED");
-                    if (payment.isEnabled()) {
-                        user.setId_role(4);
-                    } else {
-                        payment.setChecked(false);
-                        user.setId_role(3);
-                    }
-                    System.out.println(user.getId_role()+" ROL USUARIO");
-                    user.setUsername(getByName(user.getName()));
-                    System.out.println(user.getUsername()+" VALOR USUARIO");
-                    userController.updateUser(user.getId_role(),"etrobertot");
-                }
-            });
+            userController= new UserController(context);
+
         }
 
     }
