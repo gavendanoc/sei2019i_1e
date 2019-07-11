@@ -8,32 +8,48 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.photoeditor.R;
+import com.example.photoeditor.dataAccess.models.PermissionsModel;
 import com.example.photoeditor.dataAccess.models.UserModel;
 import com.example.photoeditor.dataAccess.requests.UserAdapter;
 
 import java.util.ArrayList;
 
-public class PermissionsAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolderGen> {
+public class PermissionsAdapter extends RecyclerView.Adapter<PermissionsAdapter.ViewHolderGen> {
+
+    ArrayList<PermissionsModel> permissionsList;
+
+    public PermissionsAdapter(ArrayList<PermissionsModel> permissionsList) {
+        this.permissionsList = permissionsList;
+    }
 
     @NonNull
     @Override
-    public UserAdapter.ViewHolderGen onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        return null;
+    public PermissionsAdapter.ViewHolderGen onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        View v = LayoutInflater.from(viewGroup.getContext())
+                .inflate(R.layout.tarjeta_temp_permissions, viewGroup, false);
+        return new PermissionsAdapter.ViewHolderGen(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull UserAdapter.ViewHolderGen viewHolderGen, int i) {
-
+    public void onBindViewHolder(@NonNull PermissionsAdapter.ViewHolderGen viewHolderGen, int i) {
+        PermissionsModel permissionsModel= permissionsList.get(i);
+        viewHolderGen.filtro.setText(permissionsModel.getId());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        if(this.permissionsList.isEmpty()){
+            return 0;
+        }
+        return this.permissionsList.size();
     }
 
     public class ViewHolderGen extends RecyclerView.ViewHolder {
+        TextView filtro;
         public ViewHolderGen(@NonNull View itemView) {
             super(itemView);
+            System.out.println("HERE MISTAKE");
+            filtro= itemView.findViewById(R.id.permissionsTextF);
         }
     }
 }

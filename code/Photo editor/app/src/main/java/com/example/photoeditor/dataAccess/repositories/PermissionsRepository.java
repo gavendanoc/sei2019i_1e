@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class PermissionsRepository {
     private Context context;
     ArrayList<PermissionsJoinModel> permissionsList = new ArrayList<>();
