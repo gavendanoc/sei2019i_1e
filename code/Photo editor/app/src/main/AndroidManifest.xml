@@ -4,7 +4,7 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".presentation.activities.RolesDisplayActivity"></activity>
+        <activity android:name=".presentation.activities.CardControlFinal"></activity>
+        <activity android:name=".presentation.activities.RolesDisplayActivity" />
         <activity android:name=".presentation.activities.AdminControlPanelActivity" />
         <activity android:name=".presentation.activities.RegisterActivity" />
 

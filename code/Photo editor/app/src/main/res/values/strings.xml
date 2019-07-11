@@ -13,4 +13,6 @@
     <string name="volver">volver</string>
     <string name="camara">Camara</string>
     <string name="premium">Premium</string>
+    <string name="guardar_cambios">Guardar cambios</string>
+    <string name="lista_de_usuarios_registrados">Lista de usuarios registrados</string>
 </resources>

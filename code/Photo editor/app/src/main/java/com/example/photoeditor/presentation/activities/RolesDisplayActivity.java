@@ -10,7 +10,6 @@ import android.widget.ListAdapter;
 import com.example.photoeditor.R;
 import com.example.photoeditor.bussinesLogic.controllers.UserController;
 import com.example.photoeditor.dataAccess.models.UserModel;
-import com.example.photoeditor.dataAccess.requests.UserAdapter;
 
 import java.util.ArrayList;
 
