@@ -27,7 +27,8 @@ public class AdminControlPanelActivity extends AppCompatActivity {
 
     }
     public void availableFilters(View view){
-
+        Intent roles= new Intent(this,PermissionsDisplayActivity.class);
+        startActivity(roles);
     }
 
     @Override
