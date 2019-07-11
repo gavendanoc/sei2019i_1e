@@ -1,22 +1,22 @@
 package com.example.photoeditor.dataAccess.models;
 
-public class PermissionsModel {
+public class PermissionsJoinModel {
     private int id;
     private String idRol;
     private String idParameter;
     private int status;
 
-    public PermissionsModel(int id, String idRol, String idParameter, int status) {
+    public PermissionsJoinModel(int id, String idRol, String idParameter, int status) {
         this.id = id;
         this.idRol = idRol;
         this.idParameter = idParameter;
         this.status = status;
     }
 
-    public PermissionsModel() {
+    public PermissionsJoinModel() {
     }
 
-    public PermissionsModel(String idRol, String idParameter, int status) {
+    public PermissionsJoinModel(String idRol, String idParameter, int status) {
         this.idRol = idRol;
         this.idParameter = idParameter;
         this.status = status;

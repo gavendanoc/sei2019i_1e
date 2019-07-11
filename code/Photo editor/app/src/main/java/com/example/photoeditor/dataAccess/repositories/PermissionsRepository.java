@@ -2,10 +2,10 @@ package com.example.photoeditor.dataAccess.repositories;
 
 import android.content.Context;
 
-public class PermissionsRepository {
+public class PermissionsJoinRepository {
     private Context context;
 
-    public PermissionsRepository(Context context) {
+    public PermissionsJoinRepository(Context context) {
         this.context = context;
     }
 }
