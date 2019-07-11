@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.example.photoeditor.dataAccess.models.PermissionsModel;
 import com.example.photoeditor.dataAccess.models.UserModel;
+import com.example.photoeditor.dataAccess.models.pojos.PermissionsJoinModel;
 import com.example.photoeditor.dataAccess.repositories.UserRepository;
 import com.example.photoeditor.dataAccess.requests.UserAdapter;
 import com.example.photoeditor.presentation.activities.RolesDisplayActivity;
@@ -21,16 +22,10 @@ public class PermissionsController {
     }
 
     public void permissionsList(){
-        UserRepository userRepository= new UserRepository(context);
-        userRepository.getAllUsers(this);
     }
 
-    public void retunOfPermissions(ArrayList<UserModel> permissionsList) {
-        this.permissions = permissionsList;
-        RolesDisplayActivity rolesDisplayActivity= (RolesDisplayActivity) context;
-        rolesDisplayActivity.setUserModels(this.users);
-        UserAdapter userAdapter= new UserAdapter(rolesDisplayActivity.getUserModels());
-        rolesDisplayActivity.getUserList().setAdapter(userAdapter);
+    public void retunOfPermissions(ArrayList<PermissionsJoinModel> permissionsList) {
+
     }
 
 }
