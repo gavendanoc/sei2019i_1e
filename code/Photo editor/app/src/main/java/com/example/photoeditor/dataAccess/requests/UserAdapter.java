@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -37,29 +38,29 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolderGen>
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolderGen viewHolderGen, int i) {
-        final UserModel userModel= userList.get(i);
-        viewHolderGen.usuario.setText(userModel.getName());
-        if(userModel.getId_role()==4){
-           viewHolderGen.payment.setChecked(true);
-        }
-        viewHolderGen.payment.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                userModel.setName(viewHolderGen.usuario.getText().toString());
-                System.out.println("CLICKED");
-                if (viewHolderGen.payment.isEnabled()) {
-                    userModel.setId_role(4);
-                } else {
-                    viewHolderGen.payment.setChecked(false);
-                    userModel.setId_role(3);
-                }
-                System.out.println(userModel.getId_role()+" ROL USUARIO");
-                userModel.setUsername(getByName(userModel.getName()));
-                System.out.println(userModel.getUsername()+" VALOR USUARIO");
-                viewHolderGen.userController.updateUser(userModel.getId_role(),userModel.getUsername());
+            final UserModel userModel = userList.get(i);
+            viewHolderGen.usuario.setText(userModel.getName());
+            if (userModel.getId_role() == 4) {
+                viewHolderGen.payment.setChecked(true);
             }
-        });
-    }
+            viewHolderGen.payment.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean b) {
+                    userModel.setName(viewHolderGen.usuario.getText().toString());
+
+                    if (b) {
+                        userModel.setId_role(4);
+                    } else {
+                        userModel.setId_role(3);
+                    }
+                    System.out.println(userModel.getId_role() + " ROL USUARIO");
+                    userModel.setUsername(getByName(userModel.getName()));
+                    System.out.println(userModel.getUsername() + " VALOR USUARIO");
+                    viewHolderGen.userController.updateUser(userModel.getId_role(), userModel.getUsername());
+                }
+            });
+        }
+
 
     @Override
     public int getItemCount() {
