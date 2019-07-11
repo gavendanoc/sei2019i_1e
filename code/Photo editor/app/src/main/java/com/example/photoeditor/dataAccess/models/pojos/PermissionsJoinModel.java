@@ -56,3 +56,4 @@ public class PermissionsJoinModel {
         this.status = status;
     }
 }
+

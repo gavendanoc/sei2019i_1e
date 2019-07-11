@@ -2,17 +2,9 @@ package com.example.photoeditor.dataAccess.models;
 
 public class PermissionsModel {
     private int id;
-    private String idRol;
-    private String idParameter;
+    private int idRol;
+    private int idParameter;
     private int status;
-
-    public PermissionsModel(int id, String idRol, String idParameter, int status) {
-        this.id = id;
-        this.idRol = idRol;
-        this.idParameter = idParameter;
-        this.status = status;
-    }
-
 
     public PermissionsModel(String idRol, String idParameter, int status) {
         this.idRol = idRol;

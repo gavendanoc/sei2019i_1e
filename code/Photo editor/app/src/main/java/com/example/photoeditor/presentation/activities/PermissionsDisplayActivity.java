@@ -46,11 +46,13 @@ public class PermissionsDisplayActivity extends AppCompatActivity {
         PermissionsController permissionsController= new PermissionsController(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_permissions_display);
+
         permissionsList= (RecyclerView) findViewById(R.id.PermissionsList);
         permissionsList.setLayoutManager(
                 new LinearLayoutManager(
                         this,LinearLayoutManager.VERTICAL,false));
         permissionsController.permissionsList();
+
     }
 
 

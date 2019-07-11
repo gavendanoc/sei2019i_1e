@@ -3,7 +3,11 @@ package com.example.photoeditor.dataAccess.requests;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
+import com.example.photoeditor.dataAccess.databaseEnums.RequestFields;
+import com.example.photoeditor.dataAccess.databaseEnums.tableQueries.PermissionsQueries;
+import com.example.photoeditor.dataAccess.databaseEnums.tableQueries.UserQueries;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import static com.android.volley.Request.*;
@@ -20,5 +24,17 @@ public class PermissionsRequest extends StringRequest {
 
     protected Map<String,String> getParams(){
         return parameters;
+    }
+
+
+    public static Map<String,String> getAllPermissions(){
+        String query= PermissionsQueries.SelectAllPermisionsWithJoin.getFormat(null);
+        System.out.println(query);
+        String type= PermissionsQueries.SelectAllPermisionsWithJoin.getType();
+
+        Map<String, String > parameter = new HashMap<>();
+        parameter.put(RequestFields.QUERY.getKey(), query);
+        parameter.put(RequestFields.TYPE.getKey(), type);
+        return parameter;
     }
 }
