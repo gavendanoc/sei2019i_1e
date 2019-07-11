@@ -13,4 +13,5 @@
     <string name="volver">volver</string>
     <string name="camara">Camara</string>
     <string name="premium">Premium</string>
+    <string name="title_activity_permissions_display">PermissionsDisplayActivity</string>
 </resources>
