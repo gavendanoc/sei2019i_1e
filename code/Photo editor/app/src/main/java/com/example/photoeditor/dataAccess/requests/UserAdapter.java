@@ -52,7 +52,14 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolderGen>
         }
         return this.userList.size();
     }
-
+    public String getByName(String name){
+        for (int i=0; i<userList.size();i++){
+            if(name.equals(userList.get(i).getName())){
+                return userList.get(i).getUsername();
+            }
+        }
+        return null;
+    }
     public class ViewHolderGen extends RecyclerView.ViewHolder {
         TextView usuario;
         Switch payment;
@@ -62,7 +69,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolderGen>
             payment= (Switch) itemView.findViewById(R.id.Payment);
             usuario= (TextView) itemView.findViewById(R.id.userTextF);
             user= new UserModel();
-            user.setUsername(usuario.getText().toString());
+            user.setName(usuario.getText().toString());
             final UserController userController= new UserController(context);
             payment.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -71,9 +78,13 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolderGen>
                     if (payment.isEnabled()) {
                         user.setId_role(4);
                     } else {
+                        payment.setChecked(false);
                         user.setId_role(3);
                     }
-                    userController.updateUser(user.getId_role(),user.getUsername());
+                    System.out.println(user.getId_role()+" ROL USUARIO");
+                    user.setUsername(getByName(user.getName()));
+                    System.out.println(user.getUsername()+" VALOR USUARIO");
+                    userController.updateUser(user.getId_role(),"etrobertot");
                 }
             });
         }

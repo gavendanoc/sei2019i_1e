@@ -119,13 +119,10 @@ public class UserRepository {
             public void onResponse(String response) {
                 System.out.println(response+" ON UPDATE");
                 try {
+                    System.out.println("WORKS");
                     JSONObject jsonResponse = new JSONObject(response);
                     boolean ok = jsonResponse.getBoolean("success");
-                    if (ok){
                         userController.returnUpdate(ok);
-                    } else {
-                        userController.returnUpdate(false);
-                    }
                 }catch (JSONException ex){
                     System.out.println("debug problem");
                     ex.getMessage();

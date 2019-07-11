@@ -73,10 +73,10 @@ public class UserController {
     public void returnUpdate(boolean success) {
         RolesDisplayActivity rolesDisplayActivity = (RolesDisplayActivity) context;
         if (success) {
-            Toast.makeText(rolesDisplayActivity, "Actualizado", Toast.LENGTH_LONG);
+            Toast.makeText(rolesDisplayActivity, "Actualizado", Toast.LENGTH_LONG).show();
         }
         else{
-            Toast.makeText(rolesDisplayActivity, "NO Actualizado", Toast.LENGTH_LONG);
+            Toast.makeText(rolesDisplayActivity, "NO Actualizado", Toast.LENGTH_LONG).show();
         }
     }
 }
