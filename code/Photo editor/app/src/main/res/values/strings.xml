@@ -10,4 +10,10 @@
     <string name="e_mail">e-mail</string>
     <string name="registrate">Registrate</string>
     <string name="photos">Photos</string>
+    <string name="volver">volver</string>
+    <string name="camara">Camara</string>
+    <string name="premium">Premium</string>
+    <string name="title_activity_permissions_display">PermissionsDisplayActivity</string>
+    <string name="guardar_cambios">Guardar cambios</string>
+    <string name="lista_de_usuarios_registrados">Lista de usuarios registrados</string>
 </resources>

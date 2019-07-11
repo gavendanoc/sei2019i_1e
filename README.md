@@ -1,4 +1,4 @@
-# PhotoEditor
+﻿# PhotoEditor
 
 **PhotoEditor** is a simple and lightweight photo editing 📷 android app that allows simple image filters. It's like photoshop in your pocket!🔥
 
@@ -11,6 +11,7 @@ Team Members
 * Tatiana Roberto
 * Gabriel Avendaño
 * Santiago Duque
+
 
 
 > Thanks
