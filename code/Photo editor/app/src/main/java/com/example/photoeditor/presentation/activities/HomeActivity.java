@@ -37,10 +37,8 @@ public class HomeActivity extends AppCompatActivity {
     int camera_permissions = 0;
     String currentPhotoPath;
     Uri photoURI;
-
     Bundle welcomeName;
     File photoFile;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -163,7 +161,7 @@ public class HomeActivity extends AppCompatActivity {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-    }*/
+    }
 
     /*private void scanGallery(final Context cntx, String path) {
         try {
@@ -196,5 +194,5 @@ public class HomeActivity extends AppCompatActivity {
                 })
                 .create()
                 .show();
-    }
+    }*/
 }

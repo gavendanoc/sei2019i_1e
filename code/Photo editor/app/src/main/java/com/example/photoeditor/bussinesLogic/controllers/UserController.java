@@ -5,6 +5,7 @@ import android.widget.Toast;
 
 import com.example.photoeditor.dataAccess.models.UserModel;
 import com.example.photoeditor.dataAccess.repositories.UserRepository;
+import com.example.photoeditor.presentation.activities.Adapters.UserAdapter;
 import com.example.photoeditor.dataAccess.requests.UserAdapter;
 import com.example.photoeditor.presentation.activities.MainActivity;
 import com.example.photoeditor.presentation.activities.RegisterActivity;
