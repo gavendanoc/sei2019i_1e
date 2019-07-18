@@ -46,7 +46,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void attemptLogin(String name, boolean ok) {
-        if (ok){
+         if(ok && name.equals("Admin")){
+            Intent i = new Intent(MainActivity.this, AdminControlPanelActivity.class);
+            i.putExtra("name",name);
+            MainActivity.this.startActivity(i);
+        }
+        else if (ok){
             //extrae informacion del JSON
             Toast.makeText(getApplicationContext(),
                     "Welcome" +"    "+ name, Toast.LENGTH_SHORT).show();
@@ -56,7 +61,8 @@ public class MainActivity extends AppCompatActivity {
 
             MainActivity.this.startActivity(i);
             //LoginActivity.this.finish();
-        }else{
+        }
+        else{
             AlertDialog.Builder alerta = new AlertDialog.Builder(MainActivity.this);
             alerta.setMessage("FAIL LOGIN: User does not exist or password is wrong")
                     .setNegativeButton("Retry",null)

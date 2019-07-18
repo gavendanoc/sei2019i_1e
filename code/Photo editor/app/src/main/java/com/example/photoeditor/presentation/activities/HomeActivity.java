@@ -2,7 +2,9 @@ package com.example.photoeditor.presentation.activities;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -19,6 +21,7 @@ import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.photoeditor.R;
@@ -37,12 +40,33 @@ public class HomeActivity extends AppCompatActivity {
     final int storage_permissions=1;
     String currentPhotoPath;
     Uri photoURI;
-    File photoFile;//
+    Bundle welcomeName;
+    File photoFile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        welcomeName= getIntent().getExtras();
+        String nameTemp=welcomeName.getString("name");
+        TextView welcome= (TextView) findViewById(R.id.WelcomeText);
+        welcome.setText("Bienvenido " + nameTemp);
+    }
+    //EDIT ON BACK METHOD
+
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder alerta = new AlertDialog.Builder(this);
+        alerta.setMessage("¿Está seguro de que desea cerrar sesión?")
+                .setNegativeButton("Si", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent back= new Intent(HomeActivity.this, MainActivity.class);
+                        startActivity(back);
+                    }
+                })
+                .create()
+                .show();
     }
 
     public void Camera(View view){
@@ -180,7 +204,16 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void Back(View view){
-        Intent back= new Intent(this, MainActivity.class);
-        startActivity(back);
+        AlertDialog.Builder alerta = new AlertDialog.Builder(this);
+        alerta.setMessage("¿Está seguro de que desea cerrar sesión?")
+                .setNegativeButton("Si", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent back= new Intent(HomeActivity.this, MainActivity.class);
+                        startActivity(back);
+                    }
+                })
+                .create()
+                .show();
     }
 }
