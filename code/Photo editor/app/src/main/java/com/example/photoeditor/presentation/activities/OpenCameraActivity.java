@@ -1,16 +1,11 @@
 package com.example.photoeditor.presentation.activities;
 
-import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.example.photoeditor.R;
 import com.zomato.photofilters.imageprocessors.Filter;
@@ -22,8 +17,6 @@ import com.zomato.photofilters.imageprocessors.subfilters.VignetteSubFilter;
 
 public class OpenCameraActivity extends AppCompatActivity {
 
-    LinearLayout scroll_bar;
-    Button[] filters;
     ImageView photo;
     Uri path;
     int n, i;
@@ -31,6 +24,7 @@ public class OpenCameraActivity extends AppCompatActivity {
     int[] buttons;
     Bitmap original_image, outputImage;
     Context context=this;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +34,7 @@ public class OpenCameraActivity extends AppCompatActivity {
         photo = (ImageView) findViewById(R.id.photo);
         path = (Uri) getIntent().getParcelableExtra("photo");
         photo.setImageURI(path);
+
         original_image = ((BitmapDrawable) photo.getDrawable()).getBitmap();
 
         //Número de filtros

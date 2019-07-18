@@ -8,7 +8,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.photoeditor.R;
+import com.example.photoeditor.dataAccess.models.PermissionsModel;
+import com.example.photoeditor.dataAccess.models.UserModel;
 import com.example.photoeditor.dataAccess.models.pojos.PermissionsJoinModel;
+import com.example.photoeditor.dataAccess.requests.UserAdapter;
 
 import java.util.ArrayList;
 
@@ -32,7 +35,7 @@ public class PermissionsAdapter extends RecyclerView.Adapter<PermissionsAdapter.
     public void onBindViewHolder(@NonNull PermissionsAdapter.ViewHolderGen viewHolderGen, int i) {
         PermissionsJoinModel permissionsModel= permissionsList.get(i);
         viewHolderGen.filtro.setText(permissionsModel.getId());
-
+        System.out.println("Aca recibe el ID");
     }
 
     @Override
@@ -47,7 +50,7 @@ public class PermissionsAdapter extends RecyclerView.Adapter<PermissionsAdapter.
         TextView filtro;
         public ViewHolderGen(@NonNull View itemView) {
             super(itemView);
-
+            System.out.println("HERE MISTAKE");
             filtro= itemView.findViewById(R.id.permissionsTextF);
         }
     }

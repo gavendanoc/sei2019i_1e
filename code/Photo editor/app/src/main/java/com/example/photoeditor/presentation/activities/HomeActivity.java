@@ -10,8 +10,6 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
-import android.os.Build;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -36,8 +34,7 @@ public class HomeActivity extends AppCompatActivity {
 
     final static int REQUEST_IMAGE = 100;
     final static int REQUEST_TAKE_PHOTO=0;
-    final int camera_permissions = 0;
-    final int storage_permissions=1;
+    int camera_permissions = 0;
     String currentPhotoPath;
     Uri photoURI;
     Bundle welcomeName;
@@ -70,45 +67,21 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void Camera(View view){
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            if(ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.WRITE_EXTERNAL_STORAGE)){
-                Toast.makeText(this, "In order to save your photos you have to accept the permissions", Toast.LENGTH_LONG).show();
-            }
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, storage_permissions);
-        }
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
             if(ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.CAMERA)){
-                Toast.makeText(this, "In order to access the camera you must accept the permissions", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "In order to access the camera you must accept the permissions", Toast.LENGTH_SHORT).show();
             }
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, camera_permissions);
-        }else{
-            takePhoto();
         }
-    }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permission, @NonNull int[] grantResults){
-        switch (requestCode) {
-            case camera_permissions: {
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    takePhoto();
-                }
-                return;
-            }
-            case storage_permissions:{
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, camera_permissions);
-                }
-                return;
-            }
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            return;
         }
-    }
 
-    public void takePhoto(){
         Intent takePhoto = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
         if (takePhoto.resolveActivity(getPackageManager()) != null) {
-            //File photoFile;
+            File photoFile;
             try{
                 photoFile = createImageFile();
             }catch(IOException ex){
@@ -121,6 +94,11 @@ public class HomeActivity extends AppCompatActivity {
                 startActivityForResult(takePhoto, REQUEST_TAKE_PHOTO);
             }
         }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permission, @NonNull int[] grantResults){
+        super.onRequestPermissionsResult(requestCode, permission, grantResults);
     }
 
     private File createImageFile() throws IOException {
@@ -137,6 +115,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(resultCode == RESULT_OK){
+
             switch (requestCode) {
                 case REQUEST_TAKE_PHOTO: {
                     Intent viewPhoto = new Intent(this, OpenCameraActivity.class);
@@ -164,37 +143,37 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void galleryAddPic() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            final Intent scanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
-            File f = new File(currentPhotoPath);
-            final Uri contentUri = Uri.fromFile(f);
-            scanIntent.setData(contentUri);
-            sendBroadcast(scanIntent);
-        } else {
-            final Intent intent = new Intent(Intent.ACTION_MEDIA_MOUNTED, Uri.parse("file://" + Environment.getExternalStorageDirectory()));
-            sendBroadcast(intent);
-        }
+        Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+        File f = new File(currentPhotoPath);
+        Uri contentUri = Uri.fromFile(f);
+        mediaScanIntent.setData(contentUri);
+        this.sendBroadcast(mediaScanIntent);
     }
+
 
 
     public final void notifyMediaStoreScanner(final File file) {
         try {
-            MediaStore.Images.Media.insertImage(this.getContentResolver(), file.getAbsolutePath(), file.getName(), null);
-            this.sendBroadcast(new Intent( Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.fromFile(file)));
+            MediaStore.Images.Media.insertImage(this.getContentResolver(),
+                    file.getAbsolutePath(), file.getName(), null);
+            this.sendBroadcast(new Intent(
+                    Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.fromFile(file)));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
 
-    private void scanGallery(final Context cntx, String path) {
+    /*private void scanGallery(final Context cntx, String path) {
         try {
             MediaScannerConnection.scanFile(cntx, new String[] { path },null, new MediaScannerConnection.OnScanCompletedListener() {
                 public void onScanCompleted(String path, Uri uri) {
+                    //unimplemeted method
                 }
             });
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
       
     public void SelectImage(View view){
@@ -215,5 +194,5 @@ public class HomeActivity extends AppCompatActivity {
                 })
                 .create()
                 .show();
-    }
+    }*/
 }

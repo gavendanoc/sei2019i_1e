@@ -41,7 +41,7 @@ public class PermissionsRepository {
                 System.out.println(response);
                 try {
                     JSONArray jarray = new JSONArray(response);
-
+                    System.out.println("YES");
                     for (int i=0; i<jarray.length();i++){
                         JSONObject permissionsTemp= jarray.getJSONObject(i);
 
