@@ -1,11 +1,14 @@
 package com.example.photoeditor.bussinesLogic.controllers;
 
 import android.content.Context;
+import android.widget.Toast;
 
 import com.example.photoeditor.dataAccess.models.pojos.PermissionsJoinModel;
 import com.example.photoeditor.dataAccess.repositories.PermissionsRepository;
+import com.example.photoeditor.dataAccess.repositories.UserRepository;
 import com.example.photoeditor.presentation.activities.Adapters.PermissionsAdapter;
 import com.example.photoeditor.presentation.activities.PermissionsDisplayActivity;
+import com.example.photoeditor.presentation.activities.RolesDisplayActivity;
 
 import java.util.ArrayList;
 
@@ -26,12 +29,25 @@ public class PermissionsController {
 
     public void retunOfPermissions(ArrayList<PermissionsJoinModel> permissionsList) {
         this.permissions = permissionsList;
-        System.out.println("aca imrpime el primero de la consulta retunOfPermissions");
-        System.out.println(permissions.get(0).getId()+" OUTSIDE "+permissions.get(0).getStatus());
         PermissionsDisplayActivity permissionsDisplayActivity= (PermissionsDisplayActivity) context;
         permissionsDisplayActivity.setPermissionsModels(this.permissions);
         PermissionsAdapter permissionsAdapter = new PermissionsAdapter(permissionsDisplayActivity.getPermissionsModels(), context);
         permissionsDisplayActivity.getPermissionsList().setAdapter(permissionsAdapter);
+    }
+    //status, id
+    public void updatePermissions(int status, int id){
+        PermissionsRepository permissionsRepository= new PermissionsRepository(context);
+        permissionsRepository.updatePermissions(status,id,this);
+    }
+
+    public void returnUpdate(boolean success) {
+        PermissionsDisplayActivity permissionsDisplayActivity = (PermissionsDisplayActivity) context;
+        if (success) {
+            Toast.makeText(permissionsDisplayActivity, "Actualizado", Toast.LENGTH_LONG).show();
+        }
+        else{
+            Toast.makeText(permissionsDisplayActivity, "NO Actualizado", Toast.LENGTH_LONG).show();
+        }
     }
 
 }

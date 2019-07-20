@@ -59,7 +59,7 @@ public class UserController {
 
     public void retunOfUsers(ArrayList<UserModel> userList) {
         this.users=userList;
-        System.out.println(users.get(0).getUsername()+" OUTSIDE "+users.get(0).getPassword());
+
         RolesDisplayActivity rolesDisplayActivity= (RolesDisplayActivity) context;
         rolesDisplayActivity.setUserModels(this.users);
         UserAdapter userAdapter= new UserAdapter(rolesDisplayActivity.getUserModels(),context);

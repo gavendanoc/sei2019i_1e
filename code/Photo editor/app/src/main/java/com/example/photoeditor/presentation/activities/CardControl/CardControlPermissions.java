@@ -36,7 +36,7 @@ public class CardControlPermissions extends AppCompatActivity {
                 } else {
                     permissionsModel.setStatus(0);
                 }
-              //  permissionsController.updatePermissions(TODO);
+                permissionsController.updatePermissions(permissionsModel.getStatus(),permissionsModel.getId());
             }
         });
 

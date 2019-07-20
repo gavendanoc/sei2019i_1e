@@ -35,7 +35,6 @@ public class PermissionsRepository {
         Response.Listener<String> response= new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                System.out.println("Aca imprime response permissions");
                 System.out.println(response);
                 try {
 
@@ -44,22 +43,14 @@ public class PermissionsRepository {
                     for (int i=0; i<jarray.length();i++){
 
                         JSONObject permissionsTemp= jarray.getJSONObject(i);
-                        System.out.println("ACA MUERE");
                         PermissionsJoinModel permissionsModel = new PermissionsJoinModel();
-                        System.out.println("ACA VIVE");
 
                         permissionsModel.setId(permissionsTemp.getInt(PermissionsFields.ID.getKey()));
-                        System.out.println("ACA VIVE 2");
                       permissionsModel.setroleType(permissionsTemp.getString(RolesFields.TYPE.getKey()));
-                        System.out.println("ACA VIVE 3"+permissionsModel.getroleType());
                         permissionsModel.setparameterName(permissionsTemp.getString(ParametersFields.NAME.getKey()));
-                        System.out.println("ACA VIVE 4" +permissionsModel.getparameterName());
                         permissionsModel.setStatus(permissionsTemp.getInt(PermissionsFields.STATUS.getKey()));
-                        System.out.println("ACA VIVE 5");
 
                         permissionsList.add(permissionsModel);
-
-                        System.out.println(permissionsList);
 
                     }
                     permissionsController.retunOfPermissions(permissionsList);
@@ -76,5 +67,25 @@ public class PermissionsRepository {
     }
 
 
+    public void updatePermissions(int status, int id,final  PermissionsController permissionsController) {
+        Response.Listener<String> response = new Response.Listener<String>(){
+            @Override
+            public void onResponse(String response) {
+                System.out.println(response+" ON UPDATE");
+                try {
+                    System.out.println("WORKS");
+                    JSONObject jsonResponse = new JSONObject(response);
+                    boolean ok = jsonResponse.getBoolean("success");
+                    permissionsController.returnUpdate(ok);
+                }catch (JSONException ex){
+                    System.out.println("debug problem");
+                    ex.getMessage();
 
+                }
+            }
+        };
+        PermissionsRequest r = new PermissionsRequest(PermissionsRequest.updatePermissions(status,id),response);
+        RequestQueue cola = Volley.newRequestQueue(context);
+        cola.add(r);
+    }
 }

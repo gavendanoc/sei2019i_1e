@@ -23,6 +23,8 @@ public class PermissionsRequest extends StringRequest {
         this.parameters = parameters;
     }
 
+
+
     protected Map<String,String> getParams(){
         return parameters;
     }
@@ -38,4 +40,15 @@ public class PermissionsRequest extends StringRequest {
         parameter.put(RequestFields.TYPE.getKey(), type);
         return parameter;
     }
+    public static Map<String, String> updatePermissions(int status, int id) {
+        Object[] args = {status,id};
+        String query= PermissionsQueries.UpdatePermissions.getFormat(args);
+        System.out.println(query);
+        String type= PermissionsQueries.UpdatePermissions.getType();
+        Map<String, String > parameter = new HashMap<>();
+        parameter.put(RequestFields.QUERY.getKey(), query);
+        parameter.put(RequestFields.TYPE.getKey(), type);
+        return parameter;
+    }
+
 }

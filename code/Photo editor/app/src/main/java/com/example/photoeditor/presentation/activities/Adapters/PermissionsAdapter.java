@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -34,7 +35,7 @@ public class PermissionsAdapter extends RecyclerView.Adapter<PermissionsAdapter.
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolderGen viewHolderGen, int i) {
+    public void onBindViewHolder(@NonNull final ViewHolderGen viewHolderGen, int i) {
         final PermissionsJoinModel permissionsModel= permissionsList.get(i);
         viewHolderGen.idPermissions.setText(Integer.toString(permissionsModel.getId()));
         viewHolderGen.typeRole.setText(permissionsModel.getroleType());
@@ -43,6 +44,35 @@ public class PermissionsAdapter extends RecyclerView.Adapter<PermissionsAdapter.
         if (permissionsModel.getStatus() == 1) {
             viewHolderGen.status.setChecked(true);
         }
+        viewHolderGen.status.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean b) {
+                permissionsModel.setId(Integer.parseInt(viewHolderGen.idPermissions.getText().toString()));
+
+                if (b) {
+                    permissionsModel.setStatus(1);
+                } else {
+                    permissionsModel.setStatus(0);
+                }
+
+                permissionsModel.setId(getById(permissionsModel.getId()));
+
+
+
+                viewHolderGen.permissionsController.updatePermissions(permissionsModel.getStatus(), permissionsModel.getId());
+            }
+        });
+    }
+
+    private int getById(int id) {
+        for (int i=0; i<permissionsList.size();i++){
+            if(id==permissionsList.get(i).getId()){
+                return permissionsList.get(i).getId();
+
+
+            }
+        }
+        return 0;
     }
 
     @Override
