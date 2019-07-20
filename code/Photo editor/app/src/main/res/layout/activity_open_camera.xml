@@ -1,40 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.photoeditor.presentation.activities.OpenCameraActivity"
-    android:background="@color/cardview_dark_background"
+    android:background="@color/primaryDarkColor"
     >
 
-    <ScrollView
+    <TextView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:onClick="Back"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentRight="true"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:onClick="Guardar"/>
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/image"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="50dp"
+        android:paddingBottom="125dp">
 
-        <LinearLayout
+        <ImageView
+            android:id="@+id/photo"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
 
-            <ImageView
-                android:id="@+id/photo"
-                android:layout_width="match_parent"
-                android:layout_height="569dp"
-                app:srcCompat="@android:drawable/btn_dialog"
-                />
-
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scrollbars="horizontal">
-                <LinearLayout
-                    android:id="@+id/FilterList"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"/>
-            </HorizontalScrollView>
-        </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <LinearLayout
+            android:id="@+id/FilterList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:divider="@drawable/divider"
+            android:showDividers="middle"/>
+    </HorizontalScrollView>
+</RelativeLayout>
