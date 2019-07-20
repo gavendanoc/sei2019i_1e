@@ -68,8 +68,6 @@ public class PermissionsAdapter extends RecyclerView.Adapter<PermissionsAdapter.
         for (int i=0; i<permissionsList.size();i++){
             if(id==permissionsList.get(i).getId()){
                 return permissionsList.get(i).getId();
-
-
             }
         }
         return 0;
@@ -88,6 +86,8 @@ public class PermissionsAdapter extends RecyclerView.Adapter<PermissionsAdapter.
         TextView idPermissions;
         TextView typeRole;
         TextView parametersName;
+
+
 
         PermissionsController permissionsController;
         public ViewHolderGen(@NonNull View itemView) {

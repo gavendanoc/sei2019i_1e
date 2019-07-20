@@ -9,9 +9,6 @@ import android.widget.TextView;
 
 import com.example.photoeditor.R;
 import com.example.photoeditor.bussinesLogic.controllers.PermissionsController;
-import com.example.photoeditor.bussinesLogic.controllers.UserController;
-import com.example.photoeditor.dataAccess.models.PermissionsModel;
-import com.example.photoeditor.dataAccess.models.UserModel;
 import com.example.photoeditor.dataAccess.models.pojos.PermissionsJoinModel;
 
 public class CardControlPermissions extends AppCompatActivity {
@@ -27,18 +24,7 @@ public class CardControlPermissions extends AppCompatActivity {
         permissionsModel= new PermissionsJoinModel();
         permissionsModel.setId(Integer.parseInt(permissionsT.getText().toString()));
         permissionsController= new PermissionsController(this);
-        status.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                System.out.println("CLICKED");
-                if (status.isEnabled()) {
-                    permissionsModel.setStatus(1);
-                } else {
-                    permissionsModel.setStatus(0);
-                }
-                permissionsController.updatePermissions(permissionsModel.getStatus(),permissionsModel.getId());
-            }
-        });
+        
 
     }
 
