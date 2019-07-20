@@ -60,12 +60,19 @@ public class UserRepository {
                         user.setUsername(jsonResponse.getString(UserFields.USERNAME.getKey()));
                         user.setName( jsonResponse.getString(UserFields.NAME.getKey()));
                         user.setPassword(jsonResponse.getString(UserFields.PASSWORD.getKey()));
+                        user.setEmail(jsonResponse.getString(UserFields.EMAIL.getKey()));
+
+
+                        user.setId_role(jsonResponse.getInt(UserFields.ID_ROL.getKey()));
+
+                        System.out.println("holaaa  " + user.getEmail());
+                        System.out.println("holaaa  " + user.getId_role());
                         userController.loginLogic(user);
                     } else {
                         userController.loginLogic(null);
                     }
                 }catch (JSONException ex){
-                    System.out.println("debug problem");
+                    System.out.println("debug problem " + ex.getMessage());
 
                     ex.getMessage();
 
