@@ -29,15 +29,15 @@ public class PermissionsController {
         permissionsRepository.getAllPermissions(this);
     }
 
-    public void retunOfPermissions(ArrayList<PermissionsJoinModel> permissionsList) {
+   /* public void retunOfPermissions(ArrayList<PermissionsJoinModel> permissionsList) {
         this.permissions = permissionsList;
         PermissionsDisplayActivity permissionsDisplayActivity= (PermissionsDisplayActivity) context;
         permissionsDisplayActivity.setPermissionsModels(this.permissions);
         PermissionsAdapter permissionsAdapter = new PermissionsAdapter(permissionsDisplayActivity.getPermissionsModels(), context);
         permissionsDisplayActivity.getPermissionsList().setAdapter(permissionsAdapter);
-    }
+    }*/
     //
-    public void CardView2(ArrayList<PermissionsJoinModel> permissionsList) {
+    public void retunOfPermissions(ArrayList<PermissionsJoinModel> permissionsList) {
         this.permissions = permissionsList;
         ArrayList<PermissionsCardModel> permissionsCardModels;
         permissionsCardModels = new ArrayList<>();
@@ -52,7 +52,7 @@ public class PermissionsController {
 
         }
         PermissionsDisplayActivity permissionsDisplayActivity= (PermissionsDisplayActivity) context;
-        permissionsDisplayActivity.setPermissionsModels(this.permissions);
+        permissionsDisplayActivity.setPermissionsModels(permissionsCardModels);
         PermissionsAdapter permissionsAdapter = new PermissionsAdapter(permissionsDisplayActivity.getPermissionsModels(), context);
         permissionsDisplayActivity.getPermissionsList().setAdapter(permissionsAdapter);
     }

@@ -13,15 +13,16 @@ import android.widget.TextView;
 
 import com.example.photoeditor.R;
 import com.example.photoeditor.bussinesLogic.controllers.PermissionsController;
+import com.example.photoeditor.dataAccess.models.pojos.PermissionsCardModel;
 import com.example.photoeditor.dataAccess.models.pojos.PermissionsJoinModel;
 
 import java.util.ArrayList;
 
 public class PermissionsAdapter extends RecyclerView.Adapter<PermissionsAdapter.ViewHolderGen> {
 
-    ArrayList<PermissionsJoinModel> permissionsList;
+    ArrayList<PermissionsCardModel> permissionsList;
     Context context;
-    public PermissionsAdapter(ArrayList<PermissionsJoinModel> permissionsList , Context context) {
+    public PermissionsAdapter(ArrayList<PermissionsCardModel> permissionsList , Context context) {
         this.permissionsList = permissionsList;
         this.context = context;
     }
@@ -36,39 +37,73 @@ public class PermissionsAdapter extends RecyclerView.Adapter<PermissionsAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolderGen viewHolderGen, int i) {
-        final PermissionsJoinModel permissionsModel= permissionsList.get(i);
+        final PermissionsCardModel permissionsModel= permissionsList.get(i);
        // viewHolderGen.idPermissions.setText(Integer.toString(permissionsModel.getId()));
-        viewHolderGen.typeRole.setText(permissionsModel.getroleType());
-        viewHolderGen.parametersName.setText(permissionsModel.getparameterName());
-        viewHolderGen.id=permissionsModel.getId();
 
-        if (permissionsModel.getStatus() == 1) {
-            viewHolderGen.status.setChecked(true);
+        viewHolderGen.parametersName.setText(permissionsModel.getNameParameter());
+        viewHolderGen.idPaid= permissionsModel.getIdPermissionsPaidUser();
+        viewHolderGen.idRegular= permissionsModel.getIdPermissionsRegularUser();
+
+        if (permissionsModel.getStatusPermissionsPaidUser()== 1) {
+            viewHolderGen.statusPaid.setChecked(true);
         }
-        viewHolderGen.status.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        if (permissionsModel.getStatusPermissionsRegularUser()== 1) {
+            viewHolderGen.statusRegular.setChecked(true);
+        }
+
+
+
+
+        viewHolderGen.statusRegular.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean b) {
+                //     permissionsModel.setId(Integer.parseInt(viewHolderGen.idPermissions.getText().toString()));
+                permissionsModel.setIdPermissionsRegularUser(viewHolderGen.idRegular);
+                if (b) {
+                    permissionsModel.setStatusPermissionsRegularUser(1);
+                } else {
+                    permissionsModel.setStatusPermissionsRegularUser(0);
+                }
+
+                permissionsModel.setIdPermissionsRegularUser(getByIdRegular(permissionsModel.getIdPermissionsRegularUser()));
+
+
+
+                viewHolderGen.permissionsController.updatePermissions(permissionsModel.getStatusPermissionsRegularUser(), permissionsModel.getIdPermissionsRegularUser());
+            }
+        });
+
+        viewHolderGen.statusPaid.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean b) {
            //     permissionsModel.setId(Integer.parseInt(viewHolderGen.idPermissions.getText().toString()));
-                permissionsModel.setId(viewHolderGen.id);
+                permissionsModel.setIdPermissionsPaidUser(viewHolderGen.idPaid);
                 if (b) {
-                    permissionsModel.setStatus(1);
+                    permissionsModel.setStatusPermissionsPaidUser(1);
                 } else {
-                    permissionsModel.setStatus(0);
+                    permissionsModel.setStatusPermissionsPaidUser(0);
                 }
 
-                permissionsModel.setId(getById(permissionsModel.getId()));
+                permissionsModel.setIdPermissionsPaidUser(getByIdPaid(permissionsModel.getIdPermissionsPaidUser()));
 
 
 
-                viewHolderGen.permissionsController.updatePermissions(permissionsModel.getStatus(), permissionsModel.getId());
+                viewHolderGen.permissionsController.updatePermissions(permissionsModel.getStatusPermissionsPaidUser(), permissionsModel.getIdPermissionsPaidUser());
             }
         });
     }
-
-    private int getById(int id) {
+    private int getByIdRegular(int id) {
         for (int i=0; i<permissionsList.size();i++){
-            if(id==permissionsList.get(i).getId()){
-                return permissionsList.get(i).getId();
+            if(id==permissionsList.get(i).getIdPermissionsRegularUser()){
+                return permissionsList.get(i).getIdPermissionsRegularUser();
+            }
+        }
+        return 0;
+    }
+    private int getByIdPaid(int id) {
+        for (int i=0; i<permissionsList.size();i++){
+            if(id==permissionsList.get(i).getIdPermissionsPaidUser()){
+                return permissionsList.get(i).getIdPermissionsPaidUser();
             }
         }
         return 0;
@@ -83,23 +118,24 @@ public class PermissionsAdapter extends RecyclerView.Adapter<PermissionsAdapter.
     }
 
     public class ViewHolderGen extends RecyclerView.ViewHolder {
-        Switch status;
-        TextView idPermissions;
-        TextView typeRole;
+        Switch statusPaid;
+        Switch statusRegular;
         TextView parametersName;
-        int id;
+        int idPaid;
+        int idRegular;
 
 
 
         PermissionsController permissionsController;
         public ViewHolderGen(@NonNull View itemView) {
             super(itemView);
-            status =(Switch) itemView.findViewById(R.id.status);
+            statusPaid =(Switch) itemView.findViewById(R.id.statusPaid);
+            statusRegular =(Switch) itemView.findViewById(R.id.statusRegular);
            // idPermissions = (TextView) itemView.findViewById(R.id.permissionsTextF);
-            typeRole = (TextView) itemView.findViewById(R.id.typeTextF);
             parametersName = (TextView) itemView.findViewById(R.id.parameterTextF);
             permissionsController = new PermissionsController(context);
-            id= 0;
+            idPaid= 0;
+            idRegular=0;
 
         }
     }

@@ -14,7 +14,7 @@ import com.example.photoeditor.bussinesLogic.controllers.PermissionsController;
 import com.example.photoeditor.bussinesLogic.controllers.UserController;
 import com.example.photoeditor.dataAccess.models.PermissionsModel;
 import com.example.photoeditor.dataAccess.models.UserModel;
-import com.example.photoeditor.dataAccess.models.pojos.PermissionsJoinModel;
+import com.example.photoeditor.dataAccess.models.pojos.PermissionsCardModel;
 
 import java.util.ArrayList;
 
@@ -22,13 +22,13 @@ import java.util.ArrayList;
 public class PermissionsDisplayActivity extends AppCompatActivity {
 
     private RecyclerView permissionsList;
-    private ArrayList<PermissionsJoinModel> permissionsModels;
+    private ArrayList<PermissionsCardModel> permissionsModels;
 
-    public  void setPermissionsModels(ArrayList<PermissionsJoinModel> permissionsModels) {
+    public  void setPermissionsModels(ArrayList<PermissionsCardModel> permissionsModels) {
         this.permissionsModels = permissionsModels;
     }
 
-    public ArrayList<PermissionsJoinModel> getPermissionsModels() {
+    public ArrayList<PermissionsCardModel> getPermissionsModels() {
         return permissionsModels;
     }
 
