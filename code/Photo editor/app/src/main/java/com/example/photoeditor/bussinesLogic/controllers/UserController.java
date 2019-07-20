@@ -47,9 +47,9 @@ public class UserController {
     public void loginLogic (UserModel user){
         MainActivity loginActivity =  (MainActivity) context;
         if (user != null){
-            loginActivity.attemptLogin(user.getName(), true);
+            loginActivity.attemptLogin(user.getName(), user.getId_role(), true);
         } else {
-            loginActivity.attemptLogin(null, false);
+            loginActivity.attemptLogin(null, 0, false);
         }
     }
     public void userList(){

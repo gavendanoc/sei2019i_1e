@@ -45,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
         this.startActivity(i);
     }
 
-    public void attemptLogin(String name, boolean ok) {
-         if(ok && name.equals("Admin")){
+    public void attemptLogin(String name, int role, boolean ok) {
+         if(ok && role == 2){
             Intent i = new Intent(MainActivity.this, AdminControlPanelActivity.class);
             i.putExtra("name",name);
             MainActivity.this.startActivity(i);
@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
             Intent i = new Intent(MainActivity.this, HomeActivity.class);
             i.putExtra("name",name);
+             i.putExtra("role",role);
 
             MainActivity.this.startActivity(i);
             //LoginActivity.this.finish();

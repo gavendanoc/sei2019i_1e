@@ -25,6 +25,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.photoeditor.R;
+import com.example.photoeditor.bussinesLogic.controllers.ParametersController;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -38,6 +39,9 @@ public class HomeActivity extends AppCompatActivity {
     final static int REQUEST_TAKE_PHOTO=0;
     final int camera_permissions = 0;
     final int storage_permissions=1;
+    private int userRole;
+
+
     String currentPhotoPath;
     Uri photoURI;
     Bundle welcomeName;
@@ -51,6 +55,15 @@ public class HomeActivity extends AppCompatActivity {
         String nameTemp=welcomeName.getString("name");
         TextView welcome= (TextView) findViewById(R.id.WelcomeText);
         welcome.setText("Bienvenido " + nameTemp);
+
+        userRole = welcomeName.getInt("role");
+
+        ParametersController parametersController = new ParametersController(HomeActivity.this);
+        parametersController.getValidFilters(userRole);
+
+
+
+
     }
     //EDIT ON BACK METHOD
 
