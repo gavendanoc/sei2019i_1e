@@ -1,4 +1,4 @@
-package com.example.photoeditor.presentation.activities;
+package com.example.photoeditor.presentation.activities.CardControl;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import com.example.photoeditor.R;
 import com.example.photoeditor.bussinesLogic.controllers.UserController;
 import com.example.photoeditor.dataAccess.models.UserModel;
 
-public class CardControlFinal extends AppCompatActivity {
+public class CardControlUser extends AppCompatActivity {
     private Switch payment;
     private TextView usuario;
     private UserModel user;

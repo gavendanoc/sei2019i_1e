@@ -85,8 +85,10 @@ public class UserRepository {
         Response.Listener<String> response= new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                System.out.println("Aca imprime response user");
                 System.out.println(response);
                 try {
+                    System.out.println("Aca imprime try response user");
                     JSONArray jarray = new JSONArray(response);
                     for (int i=0; i<jarray.length();i++){
                         JSONObject userTemp= jarray.getJSONObject(i);
@@ -128,8 +130,7 @@ public class UserRepository {
                 }
             }
         };
-        UserRequest r = new UserRequest(
-                UserRequest.updateUser(role,username),response);
+        UserRequest r = new UserRequest(UserRequest.updateUser(role,username),response);
         RequestQueue cola = Volley.newRequestQueue(context);
         cola.add(r);
     }

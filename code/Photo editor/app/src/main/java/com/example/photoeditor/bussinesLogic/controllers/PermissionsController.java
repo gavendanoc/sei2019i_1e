@@ -26,9 +26,11 @@ public class PermissionsController {
 
     public void retunOfPermissions(ArrayList<PermissionsJoinModel> permissionsList) {
         this.permissions = permissionsList;
+        System.out.println("aca imrpime el primero de la consulta retunOfPermissions");
+        System.out.println(permissions.get(0).getId()+" OUTSIDE "+permissions.get(0).getStatus());
         PermissionsDisplayActivity permissionsDisplayActivity= (PermissionsDisplayActivity) context;
         permissionsDisplayActivity.setPermissionsModels(this.permissions);
-        PermissionsAdapter permissionsAdapter = new PermissionsAdapter(permissionsDisplayActivity.getPermissionsModels());
+        PermissionsAdapter permissionsAdapter = new PermissionsAdapter(permissionsDisplayActivity.getPermissionsModels(), context);
         permissionsDisplayActivity.getPermissionsList().setAdapter(permissionsAdapter);
     }
 

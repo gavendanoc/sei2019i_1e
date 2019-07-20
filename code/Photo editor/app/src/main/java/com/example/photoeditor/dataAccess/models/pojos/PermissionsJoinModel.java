@@ -3,21 +3,21 @@ package com.example.photoeditor.dataAccess.models.pojos;
 public class PermissionsJoinModel {
 
     private int id;
-    private String idRol;
-    private String idParameter;
+    private String roleType;
+    private String parameterName;
     private int status;
 
-    public PermissionsJoinModel(int id, String idRol, String idParameter, int status) {
+    public PermissionsJoinModel(int id, String roleType, String parameterName, int status) {
         this.id = id;
-        this.idRol = idRol;
-        this.idParameter = idParameter;
+        this.roleType = roleType;
+        this.parameterName = parameterName;
         this.status = status;
     }
 
 
-    public PermissionsJoinModel(String idRol, String idParameter, int status) {
-        this.idRol = idRol;
-        this.idParameter = idParameter;
+    public PermissionsJoinModel(String roleType, String parameterName, int status) {
+        this.roleType = roleType;
+        this.parameterName = parameterName;
         this.status = status;
     }
 
@@ -32,20 +32,20 @@ public class PermissionsJoinModel {
         this.id = id;
     }
 
-    public String getIdRol() {
-        return idRol;
+    public String getroleType() {
+        return roleType;
     }
 
-    public void setIdRol(String idRol) {
-        this.idRol = idRol;
+    public void setroleType(String roleType) {
+        this.roleType = roleType;
     }
 
-    public String getIdParameter() {
-        return idParameter;
+    public String getparameterName() {
+        return parameterName;
     }
 
-    public void setIdParameter(String idParameter) {
-        this.idParameter = idParameter;
+    public void setparameterName(String parameterName) {
+        this.parameterName = parameterName;
     }
 
     public int getStatus() {

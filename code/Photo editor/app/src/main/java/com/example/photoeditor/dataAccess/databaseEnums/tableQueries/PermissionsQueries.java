@@ -13,14 +13,9 @@ public enum PermissionsQueries {
             "SELECT* FROM " + TableNames.Permissions.getKey()),
 
     SelectAllPermissionsWithJoin ("SelectAllPermissionsWithJoin",
-            "SELECT " + TableNames.Permissions.getKey() + "." + PermissionsFields.ID.getKey() + ", " +
-                    TableNames.Roles.getKey() + "." + RolesFields.TYPE.getKey() + ", " +
-                    TableNames.Parameters.getKey() + "." + ParametersFields.NAME.getKey() + ", " +
-                    TableNames.Permissions.getKey() + "." + PermissionsFields.STATUS.getKey() + ", " +
-                    " FROM " +
-                    TableNames.Permissions.getKey() +
-                    " INNER JOIN PARAMETERS ON PERMISSIONS.id_parameter = PARAMETERS.id " +
-                    " INNER JOIN ROLES ON PERMISSIONS.id_rol = ROLES.id"
+            "SELECT PERMISSIONS.id, ROLES.type,PARAMETERS.name,PERMISSIONS.status " +
+                    "FROM PERMISSIONS INNER JOIN PARAMETERS ON PERMISSIONS.id_parameter = PARAMETERS.id " +
+                    "INNER JOIN ROLES ON PERMISSIONS.id_rol = ROLES.id"
     );
 
     private String type;
