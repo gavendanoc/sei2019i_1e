@@ -36,11 +36,10 @@ import java.util.Date;
 public class HomeActivity extends AppCompatActivity {
 
     final static int REQUEST_IMAGE = 100;
-    final static int REQUEST_TAKE_PHOTO=0;
+    final static int REQUEST_TAKE_PHOTO = 0;
     final int camera_permissions = 0;
-    final int storage_permissions=1;
+    final int storage_permissions = 1;
     private int userRole;
-    String currentPhotoPath;
     String currentPhotoPath, name;
     Uri photoURI;
     Bundle welcomeName;
@@ -54,9 +53,7 @@ public class HomeActivity extends AppCompatActivity {
         name=welcomeName.getString("name");
         TextView welcome= (TextView) findViewById(R.id.WelcomeText);
         welcome.setText("Bienvenido " + name);
-        userRole = welcomeName.getInt("role");
-        ParametersController parametersController = new ParametersController(HomeActivity.this);
-        parametersController.getValidFilters(userRole);
+        userRole = welcomeName.getInt("userRole");
     }
     //EDIT ON BACK METHOD
 
@@ -148,6 +145,7 @@ public class HomeActivity extends AppCompatActivity {
                     Intent viewPhoto = new Intent(this, OpenCameraActivity.class);
                     viewPhoto.putExtra("photo", photoURI);
                     viewPhoto.putExtra("name",name);
+                    viewPhoto.putExtra("userRole",userRole);
                     //galleryAddPic();
                     notifyMediaStoreScanner(photoFile);
                     //scanGallery(this,currentPhotoPath);
@@ -160,6 +158,7 @@ public class HomeActivity extends AppCompatActivity {
                         Intent viewPhoto = new Intent(this, OpenCameraActivity.class);
                         viewPhoto.putExtra("photo",selectedImage);
                         viewPhoto.putExtra("name",name);
+                        viewPhoto.putExtra("userRole",userRole);
                         startActivity(viewPhoto);
 
                     } catch (Exception e) {

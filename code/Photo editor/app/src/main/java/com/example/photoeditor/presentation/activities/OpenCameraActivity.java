@@ -26,6 +26,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.photoeditor.R;
+import com.example.photoeditor.bussinesLogic.controllers.ParametersController;
 import com.zomato.photofilters.imageprocessors.Filter;
 import com.zomato.photofilters.imageprocessors.subfilters.BrightnessSubFilter;
 import com.zomato.photofilters.imageprocessors.subfilters.ColorOverlaySubFilter;
@@ -42,7 +43,7 @@ public class OpenCameraActivity extends AppCompatActivity {
     Button[] buttons;
     ImageView photo;
     Uri path;
-    int lastid;
+    int lastid, userRole;
     Bitmap original_image, outputImage, circle, filter_circle;
     Context context = this;
     Drawable thumbnail;
@@ -62,18 +63,13 @@ public class OpenCameraActivity extends AppCompatActivity {
         save.setText("Guardar >");
         path = (Uri) getIntent().getParcelableExtra("photo");
         name = (String) getIntent().getStringExtra("name");
+        userRole = getIntent().getExtras().getInt("userRole");
         photo.setImageURI(path);
         original_image = ((BitmapDrawable) photo.getDrawable()).getBitmap();
         circleThumbnail();
         lastid = 1;
-        ArrayList<Integer> filter = new ArrayList<>();
-        filter.add(1);
-        filter.add(2);
-        filter.add(3);
-        filter.add(4);
-        filter.add(5);
-        filter.add(6);
-        createFilters(filter);
+        ParametersController parametersController = new ParametersController(OpenCameraActivity.this);
+        parametersController.getValidFilters(userRole);
     }
 
     public void circleThumbnail(){
@@ -81,15 +77,6 @@ public class OpenCameraActivity extends AppCompatActivity {
         int width = (int) original_image.getWidth();
         int final_width = 1000;
         circle = original_image.copy(original_image.getConfig(),true);
-        circle = getCircleBitmap(circle);
-        circle = Bitmap.createScaledBitmap(circle,final_width,final_width*height/width,false);
-    }
-
-    public void circleOutputImage(){
-        int height = (int) outputImage.getHeight();
-        int width = (int) outputImage.getWidth();
-        int final_width = 1000;
-        circle = outputImage.copy(outputImage.getConfig(),true);
         circle = getCircleBitmap(circle);
         circle = Bitmap.createScaledBitmap(circle,final_width,final_width*height/width,false);
     }
@@ -177,11 +164,7 @@ public class OpenCameraActivity extends AppCompatActivity {
                 break;
             }
             case 2:{
-                Bitmap mutable = original_image.copy(original_image.getConfig(),true);
-                Filter myFilter = new Filter();
-                myFilter.addSubFilter(new VignetteSubFilter(context, 100));
-                outputImage = myFilter.processFilter(mutable);
-                circleOutputImage();
+                thumbnail = new BitmapDrawable(circle);
                 break;
             }
             case 3: {
@@ -241,6 +224,7 @@ public class OpenCameraActivity extends AppCompatActivity {
     public void Back(View view) {
         Intent home = new Intent(this, HomeActivity.class);
         home.putExtra("name",name);
+        home.putExtra("userRole",userRole);
         startActivity(home);
     }
 
@@ -254,6 +238,7 @@ public class OpenCameraActivity extends AppCompatActivity {
         filter_circle.recycle();
         Intent save = new Intent(this, HomeActivity.class);
         save.putExtra("name",name);
+        save.putExtra("userRole",userRole);
         startActivity(save);
     }
 

@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
             Intent i = new Intent(MainActivity.this, HomeActivity.class);
             i.putExtra("name",name);
-             i.putExtra("role",role);
+            i.putExtra("userRole",role);
 
             MainActivity.this.startActivity(i);
             //LoginActivity.this.finish();
