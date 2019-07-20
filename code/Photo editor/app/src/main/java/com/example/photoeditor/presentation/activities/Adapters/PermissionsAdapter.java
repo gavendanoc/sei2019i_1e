@@ -37,9 +37,10 @@ public class PermissionsAdapter extends RecyclerView.Adapter<PermissionsAdapter.
     @Override
     public void onBindViewHolder(@NonNull final ViewHolderGen viewHolderGen, int i) {
         final PermissionsJoinModel permissionsModel= permissionsList.get(i);
-        viewHolderGen.idPermissions.setText(Integer.toString(permissionsModel.getId()));
+       // viewHolderGen.idPermissions.setText(Integer.toString(permissionsModel.getId()));
         viewHolderGen.typeRole.setText(permissionsModel.getroleType());
         viewHolderGen.parametersName.setText(permissionsModel.getparameterName());
+        viewHolderGen.id=permissionsModel.getId();
 
         if (permissionsModel.getStatus() == 1) {
             viewHolderGen.status.setChecked(true);
@@ -47,8 +48,8 @@ public class PermissionsAdapter extends RecyclerView.Adapter<PermissionsAdapter.
         viewHolderGen.status.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean b) {
-                permissionsModel.setId(Integer.parseInt(viewHolderGen.idPermissions.getText().toString()));
-
+           //     permissionsModel.setId(Integer.parseInt(viewHolderGen.idPermissions.getText().toString()));
+                permissionsModel.setId(viewHolderGen.id);
                 if (b) {
                     permissionsModel.setStatus(1);
                 } else {
@@ -86,6 +87,7 @@ public class PermissionsAdapter extends RecyclerView.Adapter<PermissionsAdapter.
         TextView idPermissions;
         TextView typeRole;
         TextView parametersName;
+        int id;
 
 
 
@@ -93,10 +95,12 @@ public class PermissionsAdapter extends RecyclerView.Adapter<PermissionsAdapter.
         public ViewHolderGen(@NonNull View itemView) {
             super(itemView);
             status =(Switch) itemView.findViewById(R.id.status);
-            idPermissions = (TextView) itemView.findViewById(R.id.permissionsTextF);
+           // idPermissions = (TextView) itemView.findViewById(R.id.permissionsTextF);
             typeRole = (TextView) itemView.findViewById(R.id.typeTextF);
             parametersName = (TextView) itemView.findViewById(R.id.parameterTextF);
             permissionsController = new PermissionsController(context);
+            id= 0;
+
         }
     }
 }

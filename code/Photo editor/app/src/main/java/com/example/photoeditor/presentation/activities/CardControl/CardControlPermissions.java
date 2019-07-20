@@ -24,7 +24,7 @@ public class CardControlPermissions extends AppCompatActivity {
         permissionsModel= new PermissionsJoinModel();
         permissionsModel.setId(Integer.parseInt(permissionsT.getText().toString()));
         permissionsController= new PermissionsController(this);
-        
+
 
     }
 
