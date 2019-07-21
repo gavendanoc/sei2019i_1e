@@ -32,9 +32,7 @@ public class PermissionsRequest extends StringRequest {
 
     public static Map<String,String> getPermissions(){
         String query= PermissionsQueries.SelectAllPermissionsWithJoin.getFormat(null);
-        System.out.println(query);
         String type= PermissionsQueries.SelectAllPermissionsWithJoin.getType();
-
         Map<String, String > parameter = new HashMap<>();
         parameter.put(RequestFields.QUERY.getKey(), query);
         parameter.put(RequestFields.TYPE.getKey(), type);
@@ -43,7 +41,6 @@ public class PermissionsRequest extends StringRequest {
     public static Map<String, String> updatePermissions(int status, int id) {
         Object[] args = {status,id};
         String query= PermissionsQueries.UpdatePermissions.getFormat(args);
-        System.out.println(query);
         String type= PermissionsQueries.UpdatePermissions.getType();
         Map<String, String > parameter = new HashMap<>();
         parameter.put(RequestFields.QUERY.getKey(), query);

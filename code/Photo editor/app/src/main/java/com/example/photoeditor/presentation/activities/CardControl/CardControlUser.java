@@ -2,8 +2,6 @@ package com.example.photoeditor.presentation.activities.CardControl;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.MotionEvent;
-import android.view.View;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -24,19 +22,6 @@ public class CardControlUser extends AppCompatActivity {
         user= new UserModel();
         user.setUsername(usuario.getText().toString());
         userController= new UserController(this);
-        payment.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                System.out.println("CLICKED");
-                if (payment.isEnabled()) {
-                    user.setId_role(4);
-                } else {
-                    user.setId_role(3);
-                }
-                userController.updateUser(user.getId_role(),user.getUsername());
-            }
-        });
-
     }
 
     public Switch getPayment() {

@@ -1,7 +1,6 @@
 package com.example.photoeditor.presentation.activities.Adapters;
 
 import android.content.Context;
-import android.preference.TwoStatePreference;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,7 +13,7 @@ import android.widget.TextView;
 import com.example.photoeditor.R;
 import com.example.photoeditor.bussinesLogic.controllers.PermissionsController;
 import com.example.photoeditor.dataAccess.models.pojos.PermissionsCardModel;
-import com.example.photoeditor.dataAccess.models.pojos.PermissionsJoinModel;
+
 
 import java.util.ArrayList;
 
@@ -38,9 +37,8 @@ public class PermissionsAdapter extends RecyclerView.Adapter<PermissionsAdapter.
     @Override
     public void onBindViewHolder(@NonNull final ViewHolderGen viewHolderGen, int i) {
         final PermissionsCardModel permissionsModel= permissionsList.get(i);
-       // viewHolderGen.idPermissions.setText(Integer.toString(permissionsModel.getId()));
-
         viewHolderGen.parametersName.setText(permissionsModel.getNameParameter());
+
         viewHolderGen.idPaid= permissionsModel.getIdPermissionsPaidUser();
         viewHolderGen.idRegular= permissionsModel.getIdPermissionsRegularUser();
 
@@ -57,7 +55,6 @@ public class PermissionsAdapter extends RecyclerView.Adapter<PermissionsAdapter.
         viewHolderGen.statusRegular.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean b) {
-                //     permissionsModel.setId(Integer.parseInt(viewHolderGen.idPermissions.getText().toString()));
                 permissionsModel.setIdPermissionsRegularUser(viewHolderGen.idRegular);
                 if (b) {
                     permissionsModel.setStatusPermissionsRegularUser(1);
@@ -76,21 +73,18 @@ public class PermissionsAdapter extends RecyclerView.Adapter<PermissionsAdapter.
         viewHolderGen.statusPaid.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean b) {
-           //     permissionsModel.setId(Integer.parseInt(viewHolderGen.idPermissions.getText().toString()));
                 permissionsModel.setIdPermissionsPaidUser(viewHolderGen.idPaid);
                 if (b) {
                     permissionsModel.setStatusPermissionsPaidUser(1);
                 } else {
                     permissionsModel.setStatusPermissionsPaidUser(0);
                 }
-
                 permissionsModel.setIdPermissionsPaidUser(getByIdPaid(permissionsModel.getIdPermissionsPaidUser()));
-
-
-
                 viewHolderGen.permissionsController.updatePermissions(permissionsModel.getStatusPermissionsPaidUser(), permissionsModel.getIdPermissionsPaidUser());
             }
         });
+
+
     }
     private int getByIdRegular(int id) {
         for (int i=0; i<permissionsList.size();i++){
@@ -131,7 +125,6 @@ public class PermissionsAdapter extends RecyclerView.Adapter<PermissionsAdapter.
             super(itemView);
             statusPaid =(Switch) itemView.findViewById(R.id.statusPaid);
             statusRegular =(Switch) itemView.findViewById(R.id.statusRegular);
-           // idPermissions = (TextView) itemView.findViewById(R.id.permissionsTextF);
             parametersName = (TextView) itemView.findViewById(R.id.parameterTextF);
             permissionsController = new PermissionsController(context);
             idPaid= 0;

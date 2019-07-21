@@ -48,11 +48,8 @@ public class UserRepository {
             @Override
             public void onResponse(String response) {
                 try {
-                    System.out.println("debug here" );
                     JSONObject jsonResponse = new JSONObject(response);
                     boolean ok = jsonResponse.getBoolean("success");
-                    System.out.println("debug" + ok);
-                    System.out.println("debug" + jsonResponse.getString("info"));
                     if (ok){
 
                         UserModel user = new UserModel();
@@ -66,7 +63,6 @@ public class UserRepository {
                     }
                 }catch (JSONException ex){
                     System.out.println("debug problem");
-
                     ex.getMessage();
 
                 }
@@ -85,10 +81,7 @@ public class UserRepository {
         Response.Listener<String> response= new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                System.out.println("Aca imprime response user");
-                System.out.println(response);
                 try {
-                    System.out.println("Aca imprime try response user");
                     JSONArray jarray = new JSONArray(response);
                     for (int i=0; i<jarray.length();i++){
                         JSONObject userTemp= jarray.getJSONObject(i);
@@ -117,9 +110,7 @@ public class UserRepository {
         Response.Listener<String> response = new Response.Listener<String>(){
             @Override
             public void onResponse(String response) {
-                System.out.println(response+" ON UPDATE");
                 try {
-                    System.out.println("WORKS");
                     JSONObject jsonResponse = new JSONObject(response);
                     boolean ok = jsonResponse.getBoolean("success");
                         userController.returnUpdate(ok);

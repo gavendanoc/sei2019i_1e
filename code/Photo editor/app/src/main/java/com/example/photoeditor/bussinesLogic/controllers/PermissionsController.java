@@ -28,29 +28,20 @@ public class PermissionsController {
         PermissionsRepository permissionsRepository= new PermissionsRepository(context);
         permissionsRepository.getAllPermissions(this);
     }
-
-   /* public void retunOfPermissions(ArrayList<PermissionsJoinModel> permissionsList) {
-        this.permissions = permissionsList;
-        PermissionsDisplayActivity permissionsDisplayActivity= (PermissionsDisplayActivity) context;
-        permissionsDisplayActivity.setPermissionsModels(this.permissions);
-        PermissionsAdapter permissionsAdapter = new PermissionsAdapter(permissionsDisplayActivity.getPermissionsModels(), context);
-        permissionsDisplayActivity.getPermissionsList().setAdapter(permissionsAdapter);
-    }*/
-    //
     public void retunOfPermissions(ArrayList<PermissionsJoinModel> permissionsList) {
         this.permissions = permissionsList;
         ArrayList<PermissionsCardModel> permissionsCardModels;
         permissionsCardModels = new ArrayList<>();
-        for(PermissionsJoinModel p1:permissionsList){
-            if(p1.getroleType().equals("regularUser")){
-                for (PermissionsJoinModel p2 : permissionsList) {
-                    if(p1.getparameterName().equals(p2.getparameterName()) && p2.getroleType().equals("paidUser")){
-                        permissionsCardModels.add(new PermissionsCardModel(p1.getId(),p1.getStatus(),p2.getId(),p2.getStatus(),p1.getparameterName()));
+            for (PermissionsJoinModel p1 : permissionsList) {
+                if (p1.getroleType().equals("regularUser")  && !p1.getparameterName().equals("No filter")) {
+                    for (PermissionsJoinModel p2 : permissionsList) {
+                        if (p1.getparameterName().equals(p2.getparameterName()) && p2.getroleType().equals("paidUser")) {
+                            permissionsCardModels.add(new PermissionsCardModel(p1.getId(), p1.getStatus(), p2.getId(), p2.getStatus(), p1.getparameterName()));
+                        }
                     }
                 }
-            }
 
-        }
+            }
         PermissionsDisplayActivity permissionsDisplayActivity= (PermissionsDisplayActivity) context;
         permissionsDisplayActivity.setPermissionsModels(permissionsCardModels);
         PermissionsAdapter permissionsAdapter = new PermissionsAdapter(permissionsDisplayActivity.getPermissionsModels(), context);

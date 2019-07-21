@@ -2,8 +2,6 @@ package com.example.photoeditor.presentation.activities.CardControl;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.MotionEvent;
-import android.view.View;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -26,8 +24,6 @@ public class CardControlPermissions extends AppCompatActivity {
         permissionsModel= new PermissionsJoinModel();
         permissionsModel.setId(Integer.parseInt(parameterT.getText().toString()));
         permissionsController= new PermissionsController(this);
-
-
     }
 
     public Switch getStatusPaid() {

@@ -4,8 +4,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.AbsListView;
-import android.widget.ListAdapter;
 
 import com.example.photoeditor.R;
 import com.example.photoeditor.bussinesLogic.controllers.UserController;

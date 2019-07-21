@@ -17,8 +17,6 @@ public enum PermissionsQueries {
                     "FROM PERMISSIONS INNER JOIN PARAMETERS ON PERMISSIONS.id_parameter = PARAMETERS.id " +
                     "INNER JOIN ROLES ON PERMISSIONS.id_rol = ROLES.id"
     );
-
-
     private String type;
     private String query;
 
