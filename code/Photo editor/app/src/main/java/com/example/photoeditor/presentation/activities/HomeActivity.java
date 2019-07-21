@@ -25,6 +25,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.photoeditor.R;
+import com.example.photoeditor.bussinesLogic.controllers.ParametersController;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -35,10 +36,11 @@ import java.util.Date;
 public class HomeActivity extends AppCompatActivity {
 
     final static int REQUEST_IMAGE = 100;
-    final static int REQUEST_TAKE_PHOTO=0;
+    final static int REQUEST_TAKE_PHOTO = 0;
     final int camera_permissions = 0;
-    final int storage_permissions=1;
-    String currentPhotoPath;
+    final int storage_permissions = 1;
+    private int userRole;
+    String currentPhotoPath, name;
     Uri photoURI;
     Bundle welcomeName;
     File photoFile;
@@ -48,9 +50,10 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         welcomeName= getIntent().getExtras();
-        String nameTemp=welcomeName.getString("name");
+        name=welcomeName.getString("name");
         TextView welcome= (TextView) findViewById(R.id.WelcomeText);
-        welcome.setText("Bienvenido " + nameTemp);
+        welcome.setText("Bienvenido " + name);
+        userRole = welcomeName.getInt("userRole");
     }
     //EDIT ON BACK METHOD
 
@@ -141,6 +144,8 @@ public class HomeActivity extends AppCompatActivity {
                 case REQUEST_TAKE_PHOTO: {
                     Intent viewPhoto = new Intent(this, OpenCameraActivity.class);
                     viewPhoto.putExtra("photo", photoURI);
+                    viewPhoto.putExtra("name",name);
+                    viewPhoto.putExtra("userRole",userRole);
                     //galleryAddPic();
                     notifyMediaStoreScanner(photoFile);
                     //scanGallery(this,currentPhotoPath);
@@ -152,6 +157,8 @@ public class HomeActivity extends AppCompatActivity {
                         Uri selectedImage = data.getData();
                         Intent viewPhoto = new Intent(this, OpenCameraActivity.class);
                         viewPhoto.putExtra("photo",selectedImage);
+                        viewPhoto.putExtra("name",name);
+                        viewPhoto.putExtra("userRole",userRole);
                         startActivity(viewPhoto);
 
                     } catch (Exception e) {
