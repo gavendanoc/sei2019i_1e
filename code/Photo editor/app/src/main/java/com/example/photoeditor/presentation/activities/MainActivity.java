@@ -18,9 +18,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         usernameLogin = (EditText)findViewById(R.id.username);
         passwordLogin = (EditText)findViewById(R.id.password);
     }
