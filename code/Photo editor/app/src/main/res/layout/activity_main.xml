@@ -36,7 +36,9 @@
         android:background="@color/primaryLightColor"
         android:hint="Username"
         android:singleLine="true"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:textColor="@color/primaryTextColor"
+        android:textColorHint="#3d4c4d"/>
 
     <EditText
         android:id="@+id/password"
@@ -45,7 +47,9 @@
         android:layout_marginTop="30dp"
         android:background="@color/primaryLightColor"
         android:hint="@string/password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textColor="@color/primaryTextColor"
+        android:textColorHint="#3d4c4d"/>
 
     <Button
         android:layout_width="75dp"

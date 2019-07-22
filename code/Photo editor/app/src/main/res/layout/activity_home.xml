@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e2f1f8"
+    android:background="@color/primaryLightColor"
     android:orientation="vertical"
     tools:context=".presentation.activities.HomeActivity">
 
@@ -29,14 +29,15 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:text="Bienvenid@"
-                android:textColor="#808e95"
+                android:textColor="@color/primaryTextColor"
                 android:textSize="45sp"
                 android:textStyle="bold"
                 style="@style/Widget.AppCompat.ActionButton"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                />
 
             <TextView
                 android:id="@+id/NameText"
@@ -45,7 +46,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:text=""
-                android:textColor="#808e95"
+                android:textColor="@color/primaryTextColor"
                 android:textSize="25sp"
                 android:textStyle="italic"
                 android:fontFamily="sans-serif-condensed-light"
@@ -81,7 +82,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="40dp"
                 android:text=""
-                android:textColor="#808e95"
+                android:textColor="@color/primaryTextColor"
                 android:textSize="20sp"
                 android:textStyle="normal"
                 android:fontFamily="sans-serif-condensed-light"

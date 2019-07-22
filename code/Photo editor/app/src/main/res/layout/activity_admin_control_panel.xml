@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#e2f1f8"
+    android:background="@color/primaryLightColor"
     tools:context="com.example.photoeditor.presentation.activities.AdminControlPanelActivity">
 
     <ScrollView
@@ -23,12 +23,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="50dp"
                 android:layout_marginTop="40dp"
-                android:layout_marginRight="50dp"
                 android:fontFamily="serif"
                 android:text="Bienvenido"
-                android:textColor="#808e95"
+                android:textColor="@color/primaryTextColor"
                 android:textSize="45sp"
                 android:textStyle="bold"
                 style="@style/Widget.AppCompat.ActionButton"
@@ -47,7 +45,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="serif"
                 android:text=""
-                android:textColor="#808e95"
+                android:textColor="@color/primaryTextColor"
                 android:textSize="20sp"
                 android:textStyle="italic"
                 style="@style/Widget.AppCompat.ActionButton"
@@ -76,7 +74,7 @@
                 android:onClick="availableFilters"
                 android:text="Administrar Filtros"
                 android:textStyle="bold"
-                android:textColor="#808e95"
+                android:textColor="@color/primaryTextColor"
                 android:textSize="18sp"
                 android:fontFamily="sans-serif"
                 android:background="@drawable/borde_redondo"/>
@@ -91,7 +89,7 @@
                 android:onClick="roleDefinition"
                 android:text="Administrar Roles"
                 android:textStyle="bold"
-                android:textColor="#808e95"
+                android:textColor="@color/primaryTextColor"
                 android:textSize="18sp"
                 android:fontFamily="sans-serif"
                 android:background="@drawable/borde_redondo"/>
