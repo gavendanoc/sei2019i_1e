@@ -31,13 +31,15 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolderGen>
     @Override
     public ViewHolderGen onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.activity_card_control_final, viewGroup, false);
+                .inflate(R.layout.activity_card_control_user, viewGroup, false);
         return new ViewHolderGen(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolderGen viewHolderGen, int i) {
+
         final UserModel userModel = userList.get(i);
+        if(userModel.getId_role()!=2){
         viewHolderGen.usuario.setText(userModel.getName());
         if (userModel.getId_role() == 4) {
             viewHolderGen.payment.setChecked(true);
@@ -57,7 +59,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolderGen>
 
                 viewHolderGen.userController.updateUser(userModel.getId_role(), userModel.getUsername());
             }
-        });
+        });}
     }
 
     @Override

@@ -3,6 +3,7 @@ package com.example.photoeditor.presentation.activities;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Matrix;
@@ -19,11 +20,14 @@ import android.provider.MediaStore;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Surface;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.photoeditor.R;
 import com.example.photoeditor.bussinesLogic.controllers.ParametersController;
@@ -43,7 +47,7 @@ public class OpenCameraActivity extends AppCompatActivity {
     Button[] buttons;
     ImageView photo;
     Uri path;
-    int lastid, userRole;
+    int lastid = 1, userRole, orientation, final_width;
     Bitmap original_image, outputImage, circle, filter_circle;
     Context context = this;
     Drawable thumbnail;
@@ -67,7 +71,6 @@ public class OpenCameraActivity extends AppCompatActivity {
         photo.setImageURI(path);
         original_image = ((BitmapDrawable) photo.getDrawable()).getBitmap();
         circleThumbnail();
-        lastid = 1;
         ParametersController parametersController = new ParametersController(OpenCameraActivity.this);
         parametersController.getValidFilters(userRole);
     }
@@ -75,7 +78,6 @@ public class OpenCameraActivity extends AppCompatActivity {
     public void circleThumbnail(){
         int height = (int) original_image.getHeight();
         int width = (int) original_image.getWidth();
-        int final_width = 1000;
         circle = original_image.copy(original_image.getConfig(),true);
         circle = getCircleBitmap(circle);
         circle = Bitmap.createScaledBitmap(circle,final_width,final_width*height/width,false);
@@ -210,7 +212,17 @@ public class OpenCameraActivity extends AppCompatActivity {
         final Canvas canvas = new Canvas(output);
         final int color = Color.RED;
         final Paint paint = new Paint();
-        final Rect rect = new Rect(0, bitmap.getHeight()/4, bitmap.getWidth(), bitmap.getHeight()/4+bitmap.getWidth());
+        final Rect rect;
+        if(bitmap.getWidth()>bitmap.getHeight()){
+            final_width = 2000;
+            rect = new Rect((bitmap.getWidth()-bitmap.getHeight())/2, 0, (bitmap.getWidth()-bitmap.getHeight())/2+bitmap.getHeight(), bitmap.getHeight());
+        }else if(bitmap.getWidth()==bitmap.getHeight()){
+            final_width = 1000;
+            rect = new Rect(0, 0, bitmap.getWidth(), bitmap.getWidth());
+        }else{
+            final_width = 1000;
+            rect = new Rect(0, (bitmap.getHeight()-bitmap.getWidth())/2, bitmap.getWidth(), bitmap.getWidth() + (bitmap.getHeight()-bitmap.getWidth())/2);//rect = new Rect(0, (bitmap.getHeight()-bitmap.getWidth())/2, bitmap.getWidth(), bitmap.getHeight()/4+bitmap.getWidth());
+        }
         final RectF rectF = new RectF(rect);
         paint.setAntiAlias(true);
         canvas.drawARGB(0, 0, 0, 0); paint.setColor(color);
@@ -231,11 +243,15 @@ public class OpenCameraActivity extends AppCompatActivity {
     public void Guardar(View view) {
         if(lastid!=1){
             photo.setImageURI(getImageUri(context, outputImage));
+            outputImage.recycle();
+            original_image.recycle();
+            circle.recycle();
+            filter_circle.recycle();
+        }else{
+            original_image.recycle();
+            circle.recycle();
+            filter_circle.recycle();
         }
-        outputImage.recycle();
-        original_image.recycle();
-        circle.recycle();
-        filter_circle.recycle();
         Intent save = new Intent(this, HomeActivity.class);
         save.putExtra("name",name);
         save.putExtra("userRole",userRole);

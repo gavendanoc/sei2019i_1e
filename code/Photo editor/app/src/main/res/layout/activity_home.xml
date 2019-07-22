@@ -4,55 +4,95 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#77CFE9"
+    android:background="@color/primaryLightColor"
     android:orientation="vertical"
     tools:context=".presentation.activities.HomeActivity">
-    
-    
+
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:orientation="vertical"
             android:paddingLeft="25dp"
             android:paddingTop="25dp"
             android:paddingRight="25dp"
-            android:paddingBottom="25dp"
-            android:orientation="vertical">
-    <TextView
-        android:id="@+id/WelcomeText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="100dp"
-        android:text=""
-        android:textColor="?attr/colorBackgroundFloating"
-        android:textSize="45sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:paddingBottom="25dp">
 
-    <Button
-        android:layout_gravity="center"
-        android:layout_width="100dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="190dp"
-        android:onClick="Camera"
-        android:text="@string/camara"
-        android:textSize="18sp" />
-          
-     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:onClick="SelectImage"
-        android:text="Seleccionar Imagen"
-        android:textSize="18sp" />
-          
+            <TextView
+                android:id="@+id/PhotoEditor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Bienvenid@"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="45sp"
+                android:textStyle="bold"
+                style="@style/Widget.AppCompat.ActionButton"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/NameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="@color/primaryTextColor"
+                android:textSize="25sp"
+                android:textStyle="italic"
+                android:fontFamily="sans-serif-condensed-light"
+                style="@style/Widget.AppCompat.ActionButton"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/ic_launcher_foreground"
+                android:onClick="Camera"
+                app:srcCompat="@mipmap/camera250" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/ic_launcher_foreground"
+                android:onClick="SelectImage"
+                app:srcCompat="@mipmap/gallery250" />
+
+            <TextView
+                android:id="@+id/RoleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:text=""
+                android:textColor="@color/primaryTextColor"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:fontFamily="sans-serif-condensed-light"
+                style="@style/Widget.AppCompat.ActionButton"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

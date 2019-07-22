@@ -19,7 +19,7 @@ public class AdminControlPanelActivity extends AppCompatActivity {
         name=getIntent().getExtras();
         String nameAdmin= name.getString("name");
         TextView welcome= (TextView) findViewById(R.id.adminName);
-        welcome.setText("Bienvenido"+ nameAdmin);
+        welcome.setText(nameAdmin);
     }
     public void roleDefinition(View view){
         Intent roles= new Intent(this,RolesDisplayActivity.class);
