@@ -47,7 +47,7 @@ public class OpenCameraActivity extends AppCompatActivity {
     Button[] buttons;
     ImageView photo;
     Uri path;
-    int lastid, userRole, orientation, final_width;
+    int lastid = 1, userRole, orientation, final_width;
     Bitmap original_image, outputImage, circle, filter_circle;
     Context context = this;
     Drawable thumbnail;
@@ -71,7 +71,6 @@ public class OpenCameraActivity extends AppCompatActivity {
         photo.setImageURI(path);
         original_image = ((BitmapDrawable) photo.getDrawable()).getBitmap();
         circleThumbnail();
-        lastid = 1;
         ParametersController parametersController = new ParametersController(OpenCameraActivity.this);
         parametersController.getValidFilters(userRole);
     }
@@ -244,11 +243,15 @@ public class OpenCameraActivity extends AppCompatActivity {
     public void Guardar(View view) {
         if(lastid!=1){
             photo.setImageURI(getImageUri(context, outputImage));
+            outputImage.recycle();
+            original_image.recycle();
+            circle.recycle();
+            filter_circle.recycle();
+        }else{
+            original_image.recycle();
+            circle.recycle();
+            filter_circle.recycle();
         }
-        outputImage.recycle();
-        original_image.recycle();
-        circle.recycle();
-        filter_circle.recycle();
         Intent save = new Intent(this, HomeActivity.class);
         save.putExtra("name",name);
         save.putExtra("userRole",userRole);
