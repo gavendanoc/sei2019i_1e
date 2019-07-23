@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     android:background="@color/primaryLightColor"
     android:orientation="vertical"
-    tools:context=".presentation.activities.HomeActivity">
-
+    tools:context=".presentation.activities.HomeActivity"
+    android:backgroundTint="@color/primaryDarkColor">
 
     <ScrollView
         android:layout_width="match_parent"

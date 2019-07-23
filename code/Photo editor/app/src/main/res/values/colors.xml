@@ -3,7 +3,7 @@
     <color name="primaryColor">#02e2e2</color>
     <color name="primaryLightColor">#b8e2e6</color>
     <color name="primaryDarkColor">#115557</color>
-    <color name="primaryTextColor">#042124</color>
-    <color name="backgroundColor">#E0E8E0</color>
+    <color name="backgroundColor">#042124</color>
+    <color name="primaryTextColor">#E0E8E0</color>
 
 </resources>
