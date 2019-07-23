@@ -5,7 +5,7 @@
     <!-- Your product logo - 144dp color version of your app icon -->
     <item>
         <bitmap
-            android:src="@drawable/maybe"
+            android:src="@drawable/logo4"
             android:gravity="center"/>
     </item>
 </layer-list>
