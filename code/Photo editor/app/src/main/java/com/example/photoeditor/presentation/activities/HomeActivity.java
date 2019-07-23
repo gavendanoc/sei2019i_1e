@@ -1,13 +1,11 @@
 package com.example.photoeditor.presentation.activities;
 
 import android.Manifest;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Build;
@@ -35,22 +33,30 @@ import java.util.Date;
 public class HomeActivity extends AppCompatActivity {
 
     final static int REQUEST_IMAGE = 100;
-    final static int REQUEST_TAKE_PHOTO=0;
+    final static int REQUEST_TAKE_PHOTO = 0;
     final int camera_permissions = 0;
-    final int storage_permissions=1;
-    String currentPhotoPath;
+    final int storage_permissions = 1;
+    private int userRole;
+    String currentPhotoPath, name;
     Uri photoURI;
-    Bundle welcomeName;
+    Bundle nameText;
     File photoFile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        welcomeName= getIntent().getExtras();
-        String nameTemp=welcomeName.getString("name");
-        TextView welcome= (TextView) findViewById(R.id.WelcomeText);
-        welcome.setText("Bienvenido " + nameTemp);
+        nameText = getIntent().getExtras();
+        name= nameText.getString("name");
+        TextView welcome= (TextView) findViewById(R.id.NameText);
+        welcome.setText(name);
+        userRole = nameText.getInt("userRole");
+        TextView roleUser= (TextView) findViewById(R.id.RoleText);
+        if(userRole==4) {
+            roleUser.setText("usuario premium");
+        }else if(userRole==3){
+            roleUser.setText("usuario regular");
+        }
     }
     //EDIT ON BACK METHOD
 
@@ -141,6 +147,8 @@ public class HomeActivity extends AppCompatActivity {
                 case REQUEST_TAKE_PHOTO: {
                     Intent viewPhoto = new Intent(this, OpenCameraActivity.class);
                     viewPhoto.putExtra("photo", photoURI);
+                    viewPhoto.putExtra("name",name);
+                    viewPhoto.putExtra("userRole",userRole);
                     //galleryAddPic();
                     notifyMediaStoreScanner(photoFile);
                     //scanGallery(this,currentPhotoPath);
@@ -152,6 +160,8 @@ public class HomeActivity extends AppCompatActivity {
                         Uri selectedImage = data.getData();
                         Intent viewPhoto = new Intent(this, OpenCameraActivity.class);
                         viewPhoto.putExtra("photo",selectedImage);
+                        viewPhoto.putExtra("name",name);
+                        viewPhoto.putExtra("userRole",userRole);
                         startActivity(viewPhoto);
 
                     } catch (Exception e) {

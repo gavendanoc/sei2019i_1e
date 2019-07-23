@@ -36,7 +36,11 @@ public class RegisterActivity extends AppCompatActivity {
             userController.register(name.getText().toString(),username.getText().toString(),
                     email.getText().toString(),password.getText().toString());
         }else{
-            Toast.makeText(this,"Debe ingresar un correo valido", Toast.LENGTH_LONG).show();
+            if(!checkEmail(email.getText().toString())){
+                Toast.makeText(this,"Debe ingresar un correo valido", Toast.LENGTH_LONG).show();
+            }else{
+                Toast.makeText(this,"Debe ingresar una contraseña valida", Toast.LENGTH_LONG).show();
+            }
         }
     }
 
@@ -45,7 +49,13 @@ public class RegisterActivity extends AppCompatActivity {
 
             AlertDialog.Builder alerta = new AlertDialog.Builder(this);
             alerta.setMessage("Usuario creado satisfactoriamente")
-                    .setNegativeButton("Aceptar", null)
+                    .setNegativeButton("Aceptar", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent back= new Intent(RegisterActivity.this, MainActivity.class);
+                            startActivity(back);
+                        }
+                    })
                     .create()
                     .show();
         }

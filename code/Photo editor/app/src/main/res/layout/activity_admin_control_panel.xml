@@ -5,26 +5,95 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/primaryLightColor"
     tools:context="com.example.photoeditor.presentation.activities.AdminControlPanelActivity">
 
-    <TextView
-        android:id="@+id/adminName"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Bienvenido administrador" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="roleDefinition"
-        android:text="Definir roles" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="availableFilters"
-        android:text="Definir filtros disponibles" />
 
+            <TextView
+                android:id="@+id/welcomeAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:fontFamily="serif"
+                android:text="Bienvenido"
+                android:textColor="@color/backgroundColor"
+                android:textSize="45sp"
+                android:textStyle="bold"
+                style="@style/Widget.AppCompat.ActionButton"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/adminName"
+                android:layout_width="288dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="serif"
+                android:text=""
+                android:textColor="@color/backgroundColor"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                style="@style/Widget.AppCompat.ActionButton"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+            <ImageView
+                android:id="@+id/imageAdmin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="30dp"
+                app:srcCompat="@mipmap/admin1" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:onClick="availableFilters"
+                android:text="Administrar Filtros"
+                android:textStyle="bold"
+                android:textColor="@color/backgroundColor"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif"
+                android:background="@drawable/borde_redondo"/>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:onClick="roleDefinition"
+                android:text="Administrar Roles"
+                android:textStyle="bold"
+                android:textColor="@color/backgroundColor"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif"
+                android:background="@drawable/borde_redondo"/>
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

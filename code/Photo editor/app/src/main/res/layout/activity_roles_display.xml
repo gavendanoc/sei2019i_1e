@@ -11,7 +11,7 @@ tools:context="com.example.photoeditor.presentation.activities.RolesDisplayActiv
         android:id="@+id/List"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/lista_de_usuarios_registrados"
+        android:text="Usuarios Registrados"
         android:textSize="30sp"/>
 
     <android.support.v7.widget.RecyclerView

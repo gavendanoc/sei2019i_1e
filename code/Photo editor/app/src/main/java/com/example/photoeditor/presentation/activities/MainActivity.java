@@ -18,13 +18,17 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         usernameLogin = (EditText)findViewById(R.id.username);
         passwordLogin = (EditText)findViewById(R.id.password);
     }
 
+    @Override
+    public void onBackPressed() {
+
+    }
 
     public void Login(View view) {
         int duration = Toast.LENGTH_SHORT;
@@ -45,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
         this.startActivity(i);
     }
 
-    public void attemptLogin(String name, boolean ok) {
-         if(ok && name.equals("Admin")){
+    public void attemptLogin(String name, int role, boolean ok) {
+         if(ok && role == 2){
             Intent i = new Intent(MainActivity.this, AdminControlPanelActivity.class);
             i.putExtra("name",name);
             MainActivity.this.startActivity(i);
@@ -58,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
             Intent i = new Intent(MainActivity.this, HomeActivity.class);
             i.putExtra("name",name);
+            i.putExtra("userRole",role);
 
             MainActivity.this.startActivity(i);
             //LoginActivity.this.finish();

@@ -17,12 +17,20 @@
         <activity
             android:name=".presentation.activities.PermissionsDisplayActivity"
             android:label="@string/title_activity_permissions_display"
-            android:theme="@style/AppTheme.NoActionBar.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar.NoActionBar"
+            android:screenOrientation="portrait"></activity>
 
-        <activity android:name=".presentation.activities.CardControlFinal"></activity>
-        <activity android:name=".presentation.activities.RolesDisplayActivity" />
-        <activity android:name=".presentation.activities.AdminControlPanelActivity" />
-        <activity android:name=".presentation.activities.RegisterActivity" />
+        <activity android:name=".presentation.activities.CardControl.CardControlUser"
+            android:screenOrientation="portrait"
+
+            ></activity>
+        <activity android:name=".presentation.activities.RolesDisplayActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".presentation.activities.AdminControlPanelActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".presentation.activities.RegisterActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"/>
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -34,15 +42,18 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name=".presentation.activities.OpenCameraActivity" />
-        <activity android:name=".presentation.activities.HomeActivity" />
+        <activity android:name=".presentation.activities.OpenCameraActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".presentation.activities.HomeActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".presentation.activities.MainActivity"
+            android:theme="@style/SplashTheme"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

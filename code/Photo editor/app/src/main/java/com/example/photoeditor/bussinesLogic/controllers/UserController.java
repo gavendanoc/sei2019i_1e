@@ -47,9 +47,9 @@ public class UserController {
     public void loginLogic (UserModel user){
         MainActivity loginActivity =  (MainActivity) context;
         if (user != null){
-            loginActivity.attemptLogin(user.getName(), true);
+            loginActivity.attemptLogin(user.getName(), user.getId_role(), true);
         } else {
-            loginActivity.attemptLogin(null, false);
+            loginActivity.attemptLogin(null, 0, false);
         }
     }
     public void userList(){
@@ -59,7 +59,7 @@ public class UserController {
 
     public void retunOfUsers(ArrayList<UserModel> userList) {
         this.users=userList;
-        System.out.println(users.get(0).getUsername()+" OUTSIDE "+users.get(0).getPassword());
+
         RolesDisplayActivity rolesDisplayActivity= (RolesDisplayActivity) context;
         rolesDisplayActivity.setUserModels(this.users);
         UserAdapter userAdapter= new UserAdapter(rolesDisplayActivity.getUserModels(),context);

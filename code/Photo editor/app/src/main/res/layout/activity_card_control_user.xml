@@ -6,7 +6,7 @@
     android:layout_height="100dp"
     android:background="@color/cardview_dark_background"
     android:orientation="vertical"
-    tools:context="com.example.photoeditor.presentation.activities.CardControlFinal">
+    tools:context="com.example.photoeditor.presentation.activities.CardControl.CardControlUser">
 
     <android.support.v7.widget.CardView
         android:id="@+id/CardUser"
@@ -19,31 +19,30 @@
 
             <TextView
                 android:id="@+id/userTextF"
-                android:layout_width="172dp"
-                android:layout_height="match_parent"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+
+
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginStart="0dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="239dp"
-                android:layout_marginRight="239dp"
-                android:layout_marginBottom="0dp"
-                android:textAlignment="center"
-                android:textSize="15sp" />
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="38dp" />
 
             <Switch
                 android:id="@+id/Payment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/userTextF"
-                android:layout_alignRight="@+id/userTextF"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="-183dp"
-                android:layout_marginRight="-183dp"
+
+
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="160dp"
+                android:layout_marginLeft="160dp"
+                android:layout_marginTop="35dp"
+
                 android:text="@string/premium" />
 
         </RelativeLayout>

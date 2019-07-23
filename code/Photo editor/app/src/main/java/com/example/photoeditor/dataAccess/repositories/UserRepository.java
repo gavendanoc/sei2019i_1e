@@ -48,11 +48,8 @@ public class UserRepository {
             @Override
             public void onResponse(String response) {
                 try {
-                    System.out.println("debug here" );
                     JSONObject jsonResponse = new JSONObject(response);
                     boolean ok = jsonResponse.getBoolean("success");
-                    System.out.println("debug" + ok);
-                    System.out.println("debug" + jsonResponse.getString("info"));
                     if (ok){
 
                         UserModel user = new UserModel();
@@ -60,13 +57,16 @@ public class UserRepository {
                         user.setUsername(jsonResponse.getString(UserFields.USERNAME.getKey()));
                         user.setName( jsonResponse.getString(UserFields.NAME.getKey()));
                         user.setPassword(jsonResponse.getString(UserFields.PASSWORD.getKey()));
+                        user.setEmail(jsonResponse.getString(UserFields.EMAIL.getKey()));
+
+
+                        user.setId_role(jsonResponse.getInt(UserFields.ID_ROL.getKey()));
                         userController.loginLogic(user);
                     } else {
                         userController.loginLogic(null);
                     }
                 }catch (JSONException ex){
-                    System.out.println("debug problem");
-
+                    System.out.println("debug problem");     
                     ex.getMessage();
 
                 }
@@ -85,7 +85,6 @@ public class UserRepository {
         Response.Listener<String> response= new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                System.out.println(response);
                 try {
                     JSONArray jarray = new JSONArray(response);
                     for (int i=0; i<jarray.length();i++){
@@ -115,9 +114,7 @@ public class UserRepository {
         Response.Listener<String> response = new Response.Listener<String>(){
             @Override
             public void onResponse(String response) {
-                System.out.println(response+" ON UPDATE");
                 try {
-                    System.out.println("WORKS");
                     JSONObject jsonResponse = new JSONObject(response);
                     boolean ok = jsonResponse.getBoolean("success");
                         userController.returnUpdate(ok);
@@ -128,8 +125,7 @@ public class UserRepository {
                 }
             }
         };
-        UserRequest r = new UserRequest(
-                UserRequest.updateUser(role,username),response);
+        UserRequest r = new UserRequest(UserRequest.updateUser(role,username),response);
         RequestQueue cola = Volley.newRequestQueue(context);
         cola.add(r);
     }
