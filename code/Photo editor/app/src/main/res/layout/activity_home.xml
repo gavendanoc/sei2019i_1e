@@ -62,8 +62,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="40dp"
-                android:src="@mipmap/camera1"
-                android:background="@drawable/camera"
+                android:background="@mipmap/camera1"
                 android:onClick="Camera"/>
 
             <ImageButton
@@ -71,8 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="40dp"
-                android:src="@mipmap/galeria1"
-                android:background="@drawable/camera"
+                android:background="@mipmap/galeria1"
                 android:onClick="SelectImage"/>
 
             <TextView
