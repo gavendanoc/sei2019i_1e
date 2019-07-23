@@ -36,7 +36,11 @@ public class RegisterActivity extends AppCompatActivity {
             userController.register(name.getText().toString(),username.getText().toString(),
                     email.getText().toString(),password.getText().toString());
         }else{
-            Toast.makeText(this,"Debe ingresar un correo valido", Toast.LENGTH_LONG).show();
+            if(!checkEmail(email.getText().toString())){
+                Toast.makeText(this,"Debe ingresar un correo valido", Toast.LENGTH_LONG).show();
+            }else{
+                Toast.makeText(this,"Debe ingresar una contraseña valida", Toast.LENGTH_LONG).show();
+            }
         }
     }
 
@@ -54,6 +58,8 @@ public class RegisterActivity extends AppCompatActivity {
                     })
                     .create()
                     .show();
+            Intent back = new Intent(this, MainActivity.class);
+            startActivity(back);
         }
         else{
             AlertDialog.Builder alerta = new AlertDialog.Builder(this);

@@ -39,7 +39,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolderGen>
     public void onBindViewHolder(@NonNull final ViewHolderGen viewHolderGen, int i) {
 
         final UserModel userModel = userList.get(i);
-        if(userModel.getId_role()!=2){
         viewHolderGen.usuario.setText(userModel.getName());
         if (userModel.getId_role() == 4) {
             viewHolderGen.payment.setChecked(true);
@@ -59,7 +58,8 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolderGen>
 
                 viewHolderGen.userController.updateUser(userModel.getId_role(), userModel.getUsername());
             }
-        });}
+        });
+
     }
 
     @Override
