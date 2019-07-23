@@ -41,14 +41,14 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:scaleType="fitCenter"
-                android:src="@mipmap/ic_launcher_foreground" />
+                android:src="@drawable/rotulo" />
 
             <EditText
                 android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="20dp"
-                android:hint="Username"
+                android:hint="Usuario"
                 android:singleLine="true"
                 android:textAlignment="center"
                 android:textAllCaps="false"
@@ -61,7 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="10dp"
-                android:hint="@string/password"
+                android:hint="Contraseña"
                 android:inputType="textPassword"
                 android:textAlignment="center"
                 android:textColor="@color/primaryTextColor"
@@ -75,7 +75,7 @@
                 android:background="@drawable/roundbutton"
                 android:backgroundTint="#E7E7E8"
                 android:onClick="Login"
-                android:text="Login" />
+                android:text="Ingresar" />
 
             <TextView
                 android:id="@+id/registerOption"

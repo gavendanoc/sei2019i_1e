@@ -47,7 +47,7 @@
                 android:text=""
                 android:textColor="@color/backgroundColor"
                 android:textSize="20sp"
-                android:textStyle="italic"
+                android:textStyle="bold"
                 style="@style/Widget.AppCompat.ActionButton"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -74,7 +74,7 @@
                 android:onClick="availableFilters"
                 android:text="Administrar Filtros"
                 android:textStyle="bold"
-                android:textColor="@color/primaryTextColor"
+                android:textColor="@color/backgroundColor"
                 android:textSize="18sp"
                 android:fontFamily="sans-serif"
                 android:background="@drawable/borde_redondo"/>
@@ -89,7 +89,7 @@
                 android:onClick="roleDefinition"
                 android:text="Administrar Roles"
                 android:textStyle="bold"
-                android:textColor="@color/primaryTextColor"
+                android:textColor="@color/backgroundColor"
                 android:textSize="18sp"
                 android:fontFamily="sans-serif"
                 android:background="@drawable/borde_redondo"/>
