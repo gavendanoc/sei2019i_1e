@@ -7,7 +7,7 @@
     android:background="@color/primaryLightColor"
     android:orientation="vertical"
     tools:context=".presentation.activities.HomeActivity"
-    android:backgroundTint="@color/primaryDarkColor">
+    android:backgroundTint="@color/backgroundColor">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -61,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:background="@mipmap/camera1"
                 android:onClick="Camera"/>
 
@@ -69,7 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:background="@mipmap/galeria1"
                 android:onClick="SelectImage"/>
 
@@ -78,7 +78,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:text=""
                 android:textColor="@color/primaryTextColor"
                 android:textSize="20sp"
