@@ -49,11 +49,15 @@ public class RegisterActivity extends AppCompatActivity {
 
             AlertDialog.Builder alerta = new AlertDialog.Builder(this);
             alerta.setMessage("Usuario creado satisfactoriamente")
-                    .setNegativeButton("Aceptar", null)
+                    .setNegativeButton("Aceptar", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent back= new Intent(RegisterActivity.this, MainActivity.class);
+                            startActivity(back);
+                        }
+                    })
                     .create()
                     .show();
-            Intent back = new Intent(this, MainActivity.class);
-            startActivity(back);
         }
         else{
             AlertDialog.Builder alerta = new AlertDialog.Builder(this);
