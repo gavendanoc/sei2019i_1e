@@ -61,26 +61,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/ic_launcher_foreground"
-                android:onClick="Camera"
-                app:srcCompat="@mipmap/camera250" />
+                android:layout_marginTop="40dp"
+                android:src="@mipmap/camera1"
+                android:background="@drawable/camera"
+                android:onClick="Camera"/>
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/ic_launcher_foreground"
-                android:onClick="SelectImage"
-                app:srcCompat="@mipmap/gallery250" />
+                android:layout_marginTop="40dp"
+                android:src="@mipmap/galeria1"
+                android:background="@drawable/camera"
+                android:onClick="SelectImage"/>
 
             <TextView
                 android:id="@+id/RoleText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="40dp"
                 android:text=""
                 android:textColor="@color/primaryTextColor"
                 android:textSize="20sp"
