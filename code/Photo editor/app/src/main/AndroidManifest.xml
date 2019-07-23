@@ -21,12 +21,15 @@
             android:screenOrientation="portrait"></activity>
 
         <activity android:name=".presentation.activities.CardControl.CardControlUser"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"
+
+            ></activity>
         <activity android:name=".presentation.activities.RolesDisplayActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".presentation.activities.AdminControlPanelActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".presentation.activities.RegisterActivity"
+            android:windowSoftInputMode="adjustResize"
             android:screenOrientation="portrait"/>
 
         <provider
@@ -47,6 +50,7 @@
             android:name=".presentation.activities.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/SplashTheme"
+            android:windowSoftInputMode="adjustResize"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
