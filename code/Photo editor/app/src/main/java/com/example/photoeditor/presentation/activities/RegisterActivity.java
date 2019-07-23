@@ -58,8 +58,6 @@ public class RegisterActivity extends AppCompatActivity {
                     })
                     .create()
                     .show();
-            Intent back = new Intent(this, MainActivity.class);
-            startActivity(back);
         }
         else{
             AlertDialog.Builder alerta = new AlertDialog.Builder(this);

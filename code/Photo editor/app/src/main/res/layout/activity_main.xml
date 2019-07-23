@@ -81,7 +81,7 @@
                 android:id="@+id/registerOption"
                 android:layout_width="match_parent"
                 android:layout_height="25dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:onClick="Register"
                 android:text="@string/registrate"
                 android:textAlignment="center"

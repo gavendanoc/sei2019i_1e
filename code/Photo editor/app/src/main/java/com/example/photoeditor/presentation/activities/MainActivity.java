@@ -25,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
         passwordLogin = (EditText)findViewById(R.id.password);
     }
 
+    @Override
+    public void onBackPressed() {
+        
+    }
 
     public void Login(View view) {
         int duration = Toast.LENGTH_SHORT;
